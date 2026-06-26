@@ -1,0 +1,9 @@
+{
+  "name": "frankston-council-deploy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static deploy seed for Frankston 2035 — Art That Lives.",
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && cp index.html styles.css favicon.svg 404.html dist/"
+  }
+}
