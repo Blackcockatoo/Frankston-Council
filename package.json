@@ -1,9 +1,9 @@
 {
   "name": "frankston-council-deploy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "Static deploy for Frankston 2035 — Art That Lives.",
+  "description": "Static site for Frankston 2035 — Art That Lives.",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html posters.html pilots.html healthy-technology.html style.css favicon.svg 404.html dist/ && cp -R assets dist/assets"
+    "check": "node -e \"const fs=require('fs');['index.html','style.css','assets/images/frankston-hero.png','vision.html','public-art-pilots.html','schools.html'].forEach(f=>{if(!fs.existsSync(f))throw new Error('MISSING: '+f);else console.log('OK:',f);})\""
   }
 }
