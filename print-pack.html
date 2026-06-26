@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Print Pack - Frankston 2035</title>
+  <meta name="description" content="Print-ready poster seed assets for Frankston 2035 - Art That Lives.">
+  <meta property="og:title" content="Print Pack - Frankston 2035">
+  <meta property="og:description" content="Poster seed SVGs, print notes, and Frankston x Susono bilingual sheet index.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.print-pack-page { background:#071012; color:#f4e4c0; }
+    .print-pack-hero { padding: clamp(3rem, 8vw, 7rem) 1.5rem 2rem; background: radial-gradient(circle at 20% 0%, rgba(201,154,74,.26), transparent 34%), linear-gradient(180deg,#071012,#102536); border-bottom:1px solid rgba(201,154,74,.36); }
+    .print-pack-hero .section-inner, .pack-section { max-width:1180px; margin:0 auto; }
+    .print-pack-hero h1 { margin:.2rem 0 1rem; font-family:Georgia,'Times New Roman',serif; font-size:clamp(3rem,9vw,7rem); line-height:.92; letter-spacing:.02em; text-transform:uppercase; color:#f1d386; }
+    .print-pack-hero p { max-width:780px; font-size:1.15rem; color:#d8c8a5; }
+    .pack-section { padding:3rem 1.5rem; }
+    .pack-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(245px,1fr)); gap:1.4rem; }
+    .pack-card { background:#0a1518; border:1px solid rgba(201,154,74,.5); box-shadow:0 18px 50px rgba(0,0,0,.28); padding:1rem; }
+    .pack-card img { width:100%; display:block; background:#111; border:1px solid rgba(255,255,255,.08); aspect-ratio:2480/3508; object-fit:contain; }
+    .pack-card h2 { color:#f1d386; font-family:Georgia,'Times New Roman',serif; font-size:1.25rem; margin:1rem 0 .35rem; }
+    .pack-card p { color:#d8c8a5; margin:.25rem 0 1rem; }
+    .pack-actions { display:flex; flex-wrap:wrap; gap:.55rem; }
+    .pack-actions a, .small-button { border:1px solid rgba(201,154,74,.75); color:#f1d386; padding:.55rem .75rem; text-decoration:none; font-weight:700; font-size:.9rem; }
+    .pack-actions a:hover, .small-button:hover { background:#c99a4a; color:#071012; }
+    .asset-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem; margin-top:1.5rem; }
+    .asset-list article { border:1px solid rgba(201,154,74,.36); padding:1rem; background:#091518; }
+    .asset-list h3 { color:#f1d386; margin:.1rem 0 .35rem; }
+    .note-box { border-left:5px solid #c99a4a; background:#0b171a; padding:1rem 1.2rem; color:#d8c8a5; margin-top:1.5rem; }
+    @media print { .site-header,.site-footer,.no-print,.pack-actions,.print-pack-hero { display:none !important; } body.print-pack-page { background:white; color:black; } .pack-section { padding:0; } .pack-grid { display:block; } .pack-card { break-after:page; border:none; box-shadow:none; padding:0; } .pack-card h2,.pack-card p { display:none; } .pack-card img { border:none; width:100%; height:auto; } }
+  </style>
+</head>
+<body class="print-pack-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header no-print" aria-label="Primary">
+    <a class="brand-mark" href="index.html" aria-label="Frankston 2035 home"><span class="brand-dot" aria-hidden="true"></span><span>Frankston 2035</span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html">Home</a>
+      <a href="posters.html">Poster Seeds</a>
+      <a href="print-pack.html" aria-current="page">Print Pack</a>
+      <a href="pilots.html">Pilots</a>
+      <a href="healthy-technology.html">Healthy Tech</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="print-pack-hero">
+      <div class="section-inner">
+        <p class="eyebrow">Print-ready working pack</p>
+        <h1>Poster Seeds<br>01-04</h1>
+        <p>SVG source assets for the first four Frankston 2035 poster seeds, plus an index of the Frankston x Susono Japanese-English bilingual sheets generated in this run.</p>
+        <p class="maker-stamp">Independent civic proposal by Blue Snake Studio. Not an official Frankston City Council website.</p>
+      </div>
+    </section>
+
+    <section class="pack-section" aria-label="Poster seed assets">
+      <div class="split-heading">
+        <div>
+          <p class="eyebrow">A4 poster seeds</p>
+          <h2>Open an SVG, print it, or use it as the editable source.</h2>
+        </div>
+        <button class="button primary no-print" type="button" onclick="window.print()">Print visible pack</button>
+      </div>
+      <div class="pack-grid">
+        <article class="pack-card" id="seed-01">
+          <img src="assets/print-pack/poster-seeds/poster-seed-01-make-the-wall-teach.svg" alt="Poster Seed 01 Make The Wall Teach">
+          <h2>01 — Make The Wall Teach</h2>
+          <p>A mural is a moment. A living mural is a relationship.</p>
+          <div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-01-make-the-wall-teach.svg">Open SVG</a></div>
+        </article>
+        <article class="pack-card" id="seed-02">
+          <img src="assets/print-pack/poster-seeds/poster-seed-02-community-learns-to-create.svg" alt="Poster Seed 02 Community Learns To Create">
+          <h2>02 — Community Learns To Create</h2>
+          <p>The greatest public artwork is not a mural. It is a community that learns to create.</p>
+          <div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-02-community-learns-to-create.svg">Open SVG</a></div>
+        </article>
+        <article class="pack-card" id="seed-03">
+          <img src="assets/print-pack/poster-seeds/poster-seed-03-build-makers.svg" alt="Poster Seed 03 Build Makers">
+          <h2>03 — Build Makers</h2>
+          <p>Do not build monuments. Build makers.</p>
+          <div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-03-build-makers.svg">Open SVG</a></div>
+        </article>
+        <article class="pack-card" id="seed-04">
+          <img src="assets/print-pack/poster-seeds/poster-seed-04-scan-less-notice-more.svg" alt="Poster Seed 04 Scan Less Notice More">
+          <h2>04 — Scan Less / Notice More</h2>
+          <p>Use the code to notice the place, then put the phone away.</p>
+          <div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-04-scan-less-notice-more.svg">Open SVG</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="pack-section" aria-label="Frankston Susono bilingual sheet index">
+      <p class="eyebrow">Frankston x Susono</p>
+      <h2>Japanese-English bilingual sheets tracked in this backup.</h2>
+      <div class="asset-list">
+        <article><h3>01 — Frankston to Susono</h3><p>Bilingual chorus poster. From the bay to Fuji; two shores, one crew.</p></article>
+        <article><h3>02 — Kuro Tsubasa no Sendan</h3><p>Romaji + English chant cheat sheet for the Black Wing Crew chorus sequence.</p></article>
+        <article><h3>03 — Row the Night Right Through</h3><p>Bilingual chorus poster built around the row/chant call-and-response.</p></article>
+        <article><h3>04 — Black Omen</h3><p>Japanese-English lyric study poster with key words and pronunciation prompts.</p></article>
+        <article><h3>05 — Row the Black</h3><p>Bilingual chorus poster for the row/flame/storm chant.</p></article>
+      </div>
+      <div class="note-box">
+        <strong>Status:</strong> full-size generated PNG sheets were backed up in the working archive for this run; this repo page records the index and public print-pack structure. Add final approved full-resolution images only when rights, review, and release status are clear.
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print">
+    <p>Frankston 2035 - Art That Lives. A seed kit by Blue Snake Studio.</p>
+    <p>The ecosystem is the artwork.</p>
+  </footer>
+</body>
+</html>
