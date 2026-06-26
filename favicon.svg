@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Frankston 2035 mark">
+  <defs>
+    <linearGradient id="g" x1="18" y1="18" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f4bd68"/>
+      <stop offset="0.55" stop-color="#8fd3dd"/>
+      <stop offset="1" stop-color="#0f2f3f"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="#07151d"/>
+  <path d="M18 83c19-13 35-15 50-6 15 10 28 8 42-6" fill="none" stroke="url(#g)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M27 57c15-18 33-26 54-22 11 2 19 7 26 14" fill="none" stroke="#eef7f5" stroke-opacity=".86" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="38" cy="43" r="7" fill="#f4bd68"/>
+</svg>
