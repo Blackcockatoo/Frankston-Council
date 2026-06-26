@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2480" height="3508" viewBox="0 0 2480 3508" role="img" aria-label="Poster Seed 05 Asked First">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#050708"/><stop offset="1" stop-color="#2a1714"/></linearGradient>
+    <style>.serif{font-family:Georgia,'Times New Roman',serif}.sans{font-family:Arial,Helvetica,sans-serif}.bold{font-weight:800}.wide{letter-spacing:8px}</style>
+  </defs>
+  <rect width="2480" height="3508" fill="url(#bg)"/>
+  <rect x="92" y="92" width="2296" height="3324" fill="none" stroke="#c99a4a" stroke-width="10" opacity=".85"/>
+  <rect x="142" y="142" width="2196" height="3224" fill="none" stroke="#8f6a2f" stroke-width="4" opacity=".7"/>
+  <text x="260" y="300" class="serif bold wide" fill="#e6c779" font-size="56">POSTER SEED 05</text>
+  <text x="2220" y="300" text-anchor="end" class="sans wide" fill="#9fb0ac" font-size="38">FRANKSTON 2035 - ART THAT LIVES</text>
+  <line x1="260" y1="380" x2="2220" y2="380" stroke="#c99a4a" stroke-width="5" opacity=".65"/>
+  <circle cx="1240" cy="455" r="84" fill="none" stroke="#c99a4a" stroke-width="5"/><text x="1240" y="474" text-anchor="middle" class="serif bold" fill="#e6c779" font-size="52">B$S</text>
+  <g opacity=".65" stroke="#e6c779" stroke-width="8" fill="none">
+    <circle cx="430" cy="780" r="86"/><path d="M384 780h92M430 734v92"/>
+    <circle cx="2050" cy="780" r="86"/><path d="M2004 780h92M2050 734v92"/>
+    <path d="M530 780C720 650 930 650 1120 780M1360 780C1550 650 1760 650 1950 780"/>
+  </g>
+  <text x="1240" y="1030" text-anchor="middle" class="serif bold" fill="#efe2c0" font-size="360">ASKED</text>
+  <text x="1240" y="1338" text-anchor="middle" class="serif bold" fill="#e6c779" font-size="340">FIRST</text>
+  <line x1="380" y1="1478" x2="2100" y2="1478" stroke="#c99a4a" stroke-width="7"/>
+  <text x="1240" y="1572" text-anchor="middle" class="sans wide" fill="#9fb0ac" font-size="44">PERMISSION IS NOT A DELAY. IT IS THE FOUNDATION.</text>
+  <rect x="260" y="1720" width="1960" height="500" rx="70" fill="#081316" stroke="#c99a4a" stroke-width="5"/>
+  <text x="1240" y="1898" text-anchor="middle" class="serif" fill="#efe2c0" font-size="92">Respect does not scale by being loud.</text>
+  <text x="1240" y="2048" text-anchor="middle" class="serif bold" fill="#e6c779" font-size="108">It scales by being asked first.</text>
+  <g class="serif bold" fill="#e6c779" font-size="78" text-anchor="middle">
+    <text x="488" y="2515">ASK</text><text x="990" y="2515">WAIT</text><text x="1492" y="2515">LISTEN</text><text x="1994" y="2515">HONOUR</text>
+  </g>
+  <g fill="none" stroke="#c99a4a" stroke-width="5"><rect x="260" y="2370" width="455" height="460" rx="55"/><rect x="765" y="2370" width="455" height="460" rx="55"/><rect x="1270" y="2370" width="455" height="460" rx="55"/><rect x="1775" y="2370" width="455" height="460" rx="55"/></g>
+  <rect x="260" y="3028" width="1960" height="260" rx="70" fill="#111b1e" stroke="#c99a4a" stroke-width="6"/>
+  <text x="360" y="3122" class="sans bold wide" fill="#d96d4b" font-size="42">MICRO-ACTION</text>
+  <text x="360" y="3218" class="serif bold" fill="#efe2c0" font-size="68">Do not publish cultural content before</text>
+  <text x="360" y="3298" class="serif bold" fill="#e6c779" font-size="68">the right people have guided the process.</text>
+  <line x1="260" y1="3376" x2="2220" y2="3376" stroke="#c99a4a" stroke-width="5"/>
+  <text x="260" y="3445" class="serif bold" fill="#e6c779" font-size="48">Frankston 2035 - Art That Lives</text>
+  <text x="2220" y="3445" text-anchor="end" class="sans" fill="#9fb0ac" font-size="38">Blue Snake Studio seed</text>
+</svg>
