@@ -1,4 +1,0 @@
-# Netlify redirect rules — canonical domain enforcement
-https://www.blkck2.com/* https://blkck2.com/:splat 301!
-http://www.blkck2.com/* https://blkck2.com/:splat 301!
-http://blkck2.com/* https://blkck2.com/:splat 301!

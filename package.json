@@ -1,9 +1,9 @@
 {
-  "name": "frankston-council-deploy",
-  "version": "1.0.0",
+  "name": "blkck2-site",
+  "version": "2.0.0",
   "private": true,
-  "description": "Static deploy for Frankston 2035 — Art That Lives.",
+  "description": "Blue $nake Studio — BLKCK2 creative portal with Frankston 2035 civic project.",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html posters.html pilots.html healthy-technology.html style.css favicon.svg 404.html dist/ && cp -R assets dist/assets"
+    "check": "node -e \"const fs=require('fs');['index.html','frankston/index.html','styles.css','script.js'].forEach(f=>{if(!fs.existsSync(f))throw new Error('Missing: '+f);});console.log('All core files present.');\""
   }
 }
