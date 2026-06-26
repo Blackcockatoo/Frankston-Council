@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Screen as Doorway Diagram - Frankston 2035</title>
+  <style>
+    :root {
+      --ink: #161919;
+      --paper: #fafaf7;
+      --white: #ffffff;
+      --bay-deep: #102a35;
+      --bay-deeper: #06161d;
+      --bay-mid: #3e7186;
+      --bay-pale: #bfd7dd;
+      --sand: #e8e1d3;
+      --cockatoo: #f4c542;
+      --coral: #d98e73;
+      --leaf: #557b68;
+      --line: rgba(22, 25, 25, 0.18);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #d8d8d2;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+
+    .sheet {
+      width: 297mm;
+      min-height: 210mm;
+      margin: 18px auto;
+      padding: 15mm;
+      background:
+        linear-gradient(90deg, rgba(191, 215, 221, 0.55), rgba(250, 250, 247, 0.95)),
+        var(--paper);
+      border: 1px solid rgba(6, 22, 29, 0.18);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18mm;
+      align-items: start;
+      padding-bottom: 8mm;
+      border-bottom: 2px solid var(--bay-deep);
+    }
+
+    .eyebrow {
+      margin: 0 0 4mm;
+      color: var(--bay-mid);
+      font-size: 9pt;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 15ch;
+      color: var(--bay-deeper);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42pt;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .stamp {
+      max-width: 58mm;
+      padding: 5mm;
+      background: var(--bay-deep);
+      color: var(--white);
+      font-size: 10pt;
+      font-weight: 800;
+    }
+
+    .north-star {
+      margin: 7mm 0 0;
+      max-width: 150mm;
+      font-size: 15pt;
+      font-weight: 800;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6mm;
+      margin-top: 14mm;
+      align-items: stretch;
+    }
+
+    .step {
+      position: relative;
+      min-height: 55mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 6mm;
+      background: var(--white);
+      border: 2px solid var(--bay-deep);
+    }
+
+    .step:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -6mm;
+      width: 6mm;
+      height: 2px;
+      background: var(--bay-deep);
+    }
+
+    .step:not(:last-child)::before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 3px);
+      right: -7mm;
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 7px solid var(--bay-deep);
+    }
+
+    .step strong {
+      display: block;
+      color: var(--bay-deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 19pt;
+      line-height: 1;
+    }
+
+    .step span {
+      display: inline-flex;
+      width: 11mm;
+      height: 11mm;
+      align-items: center;
+      justify-content: center;
+      background: var(--cockatoo);
+      color: var(--bay-deeper);
+      font-weight: 900;
+    }
+
+    .step p {
+      margin: 5mm 0 0;
+      font-size: 10pt;
+    }
+
+    .offline {
+      background: var(--cockatoo);
+      border-color: var(--bay-deeper);
+    }
+
+    .finish {
+      background: var(--bay-deep);
+      color: var(--white);
+    }
+
+    .finish strong {
+      color: var(--white);
+    }
+
+    .finish span {
+      background: var(--white);
+      color: var(--bay-deep);
+    }
+
+    .support {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 8mm;
+      margin-top: 12mm;
+    }
+
+    .panel {
+      padding: 6mm;
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0 0 4mm;
+      color: var(--bay-deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 20pt;
+      line-height: 1.05;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2mm 6mm;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 5mm;
+      font-size: 9.5pt;
+      font-weight: 700;
+    }
+
+    li::before {
+      content: "+";
+      position: absolute;
+      left: 0;
+      color: var(--leaf);
+      font-weight: 900;
+    }
+
+    .rule {
+      display: grid;
+      gap: 3mm;
+      margin: 0;
+      font-size: 13pt;
+      font-weight: 900;
+    }
+
+    .rule span {
+      display: block;
+      padding: 3mm 4mm;
+      background: var(--bay-deep);
+      color: var(--white);
+    }
+
+    footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8mm;
+      align-items: end;
+      margin-top: 9mm;
+      padding-top: 5mm;
+      border-top: 1px solid var(--line);
+      font-size: 8.5pt;
+      color: rgba(22, 25, 25, 0.72);
+    }
+
+    footer strong {
+      color: var(--bay-deep);
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 0;
+      }
+
+      body {
+        background: #ffffff;
+      }
+
+      .sheet {
+        width: 297mm;
+        min-height: 210mm;
+        margin: 0;
+        border: 0;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header>
+      <div>
+        <p class="eyebrow">Frankston 2035 - Healthy Technology</p>
+        <h1>Screen as Doorway, Not Destination</h1>
+        <p class="north-star">Technology should give attention back to Frankston, people, and making.</p>
+      </div>
+      <aside class="stamp">Draft production diagram<br>Use for council-safe checklist and pilot review.</aside>
+    </header>
+
+    <section class="flow" aria-label="Healthy technology flow">
+      <article class="step">
+        <span>01</span>
+        <div>
+          <strong>QR / Link</strong>
+          <p>Opens the door without app install or default login.</p>
+        </div>
+      </article>
+      <article class="step">
+        <span>02</span>
+        <div>
+          <strong>Short Prompt</strong>
+          <p>One clear task. Plain English. No infinite scroll.</p>
+        </div>
+      </article>
+      <article class="step offline">
+        <span>03</span>
+        <div>
+          <strong>Offline Action</strong>
+          <p>Walk, notice, draw, discuss, print, make, or teach.</p>
+        </div>
+      </article>
+      <article class="step">
+        <span>04</span>
+        <div>
+          <strong>Optional Reflection</strong>
+          <p>Adult-led or group-safe. Anonymous aggregate metrics only if needed.</p>
+        </div>
+      </article>
+      <article class="step finish">
+        <span>05</span>
+        <div>
+          <strong>Finish</strong>
+          <p>The experience ends. The user returns attention to place.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="support">
+      <article class="panel">
+        <h2>Proof Gates</h2>
+        <ul>
+          <li>Load speed</li>
+          <li>No-login test</li>
+          <li>No-child-data test</li>
+          <li>Printable fallback</li>
+          <li>Mobile readability</li>
+          <li>Accessibility pass</li>
+          <li>Visible privacy note</li>
+          <li>Clear exit prompt</li>
+          <li>Adult-led group mode</li>
+        </ul>
+      </article>
+      <article class="panel">
+        <h2>Decision Rule</h2>
+        <p class="rule">
+          <span>If it steals attention, cut it.</span>
+          <span>If it needs child data, redesign it.</span>
+          <span>If it encourages compulsive use, reject it.</span>
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <p><strong>Source:</strong> 07 - Healthy Technology - Main Document Draft.md. <strong>Status:</strong> draft production sheet, not public council material.</p>
+      <p>Blue Snake Studio as delivery engine. Frankston remains the hero.</p>
+    </footer>
+  </main>
+</body>
+</html>

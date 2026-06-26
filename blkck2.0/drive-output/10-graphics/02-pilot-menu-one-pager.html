@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pilot Menu One-Pager - Frankston 2035</title>
+  <style>
+    :root {
+      --ink: #161919;
+      --paper: #fafaf7;
+      --white: #ffffff;
+      --bay-deep: #102a35;
+      --bay-deeper: #06161d;
+      --bay-mid: #3e7186;
+      --bay-pale: #bfd7dd;
+      --sand: #e8e1d3;
+      --cockatoo: #f4c542;
+      --coral: #d98e73;
+      --leaf: #557b68;
+      --line: rgba(22, 25, 25, 0.18);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #d8d8d2;
+      color: var(--ink);
+      line-height: 1.28;
+    }
+
+    .sheet {
+      width: 297mm;
+      min-height: 210mm;
+      margin: 18px auto;
+      padding: 12mm;
+      background: var(--paper);
+      border: 1px solid rgba(6, 22, 29, 0.18);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr 74mm;
+      gap: 10mm;
+      align-items: end;
+      padding-bottom: 6mm;
+      border-bottom: 2px solid var(--bay-deep);
+    }
+
+    .eyebrow {
+      margin: 0 0 3mm;
+      color: var(--bay-mid);
+      font-size: 8.5pt;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--bay-deeper);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34pt;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .selection-rule {
+      padding: 4mm;
+      background: var(--bay-deep);
+      color: var(--white);
+      font-size: 10pt;
+      font-weight: 800;
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm;
+      margin-top: 6mm;
+    }
+
+    .legend span {
+      display: block;
+      padding: 2.5mm 3mm;
+      background: var(--bay-pale);
+      border-left: 4px solid var(--bay-deep);
+      font-size: 8.3pt;
+      font-weight: 800;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 4mm;
+      margin-top: 6mm;
+    }
+
+    .pilot {
+      display: flex;
+      min-height: 118mm;
+      flex-direction: column;
+      padding: 4mm;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-top: 5px solid var(--bay-deep);
+    }
+
+    .pilot.recommended {
+      border-top-color: var(--cockatoo);
+      box-shadow: inset 0 0 0 2px rgba(244, 197, 66, 0.58);
+    }
+
+    .pilot h2 {
+      margin: 0 0 3mm;
+      color: var(--bay-deep);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 15pt;
+      line-height: 1.02;
+    }
+
+    .tag {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 3mm;
+      padding: 1.5mm 2mm;
+      background: var(--cockatoo);
+      color: var(--bay-deeper);
+      font-size: 7.5pt;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    dl {
+      display: grid;
+      gap: 2.6mm;
+      margin: 0;
+    }
+
+    dt {
+      color: var(--bay-mid);
+      font-size: 7.2pt;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    dd {
+      margin: 0;
+      font-size: 8.25pt;
+    }
+
+    .risk-low,
+    .risk-medium,
+    .risk-high {
+      font-weight: 900;
+    }
+
+    .risk-low {
+      color: var(--leaf);
+    }
+
+    .risk-medium {
+      color: #8a5f13;
+    }
+
+    .risk-high {
+      color: #9a351f;
+    }
+
+    .bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4mm;
+      margin-top: 6mm;
+    }
+
+    .note {
+      min-height: 20mm;
+      padding: 4mm;
+      background: var(--sand);
+      border-left: 5px solid var(--bay-deep);
+      font-size: 8.6pt;
+      font-weight: 800;
+    }
+
+    footer {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8mm;
+      margin-top: 5mm;
+      padding-top: 4mm;
+      border-top: 1px solid var(--line);
+      font-size: 8pt;
+      color: rgba(22, 25, 25, 0.72);
+    }
+
+    footer strong {
+      color: var(--bay-deep);
+    }
+
+    @media print {
+      @page {
+        size: A4 landscape;
+        margin: 0;
+      }
+
+      body {
+        background: #ffffff;
+      }
+
+      .sheet {
+        width: 297mm;
+        min-height: 210mm;
+        margin: 0;
+        border: 0;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header>
+      <div>
+        <p class="eyebrow">Frankston 2035 - Pilot Menu</p>
+        <h1>Choose one low-risk first move.</h1>
+      </div>
+      <aside class="selection-rule">Do not bundle all five. Pick one pilot, test it honestly, then decide whether to continue, revise, or stop.</aside>
+    </header>
+
+    <section class="legend" aria-label="Cost band wording">
+      <span>Tiny: planning, copy, print material, lightweight prototype.</span>
+      <span>Small: simple production, web layer, printing, or facilitation.</span>
+      <span>Medium: multiple partners, permissions, approvals, or careful review.</span>
+    </section>
+
+    <section class="menu" aria-label="Pilot menu">
+      <article class="pilot recommended">
+        <span class="tag">Recommended first pick</span>
+        <h2>Living Mural Lesson Wall</h2>
+        <dl>
+          <div><dt>Purpose</dt><dd>One existing artwork becomes a low-prep learning surface.</dd></div>
+          <div><dt>Risk level</dt><dd><span class="risk-medium">Medium</span>: artist/site permission and public clarity.</dd></div>
+          <div><dt>Council ask</dt><dd>Nominate one candidate wall and advise the permission pathway.</dd></div>
+          <div><dt>Cost band</dt><dd>Small.</dd></div>
+          <div><dt>30 / 60 / 90</dt><dd>30: site choice. 60: QR lesson and worksheet. 90: limited test and go/stop/revise note.</dd></div>
+          <div><dt>Permissions</dt><dd>Artwork/copyright, site/signage, school participation, protocol gate if cultural content appears.</dd></div>
+        </dl>
+      </article>
+
+      <article class="pilot">
+        <span class="tag">Visible civic test</span>
+        <h2>Frankston Creativity Trail</h2>
+        <dl>
+          <div><dt>Purpose</dt><dd>A short walk turns public space into creative prompts.</dd></div>
+          <div><dt>Risk level</dt><dd><span class="risk-medium">Medium</span>: wayfinding, accessibility, sign clutter.</dd></div>
+          <div><dt>Council ask</dt><dd>Choose three walkable stops and advise temporary signage rules.</dd></div>
+          <div><dt>Cost band</dt><dd>Small.</dd></div>
+          <div><dt>30 / 60 / 90</dt><dd>30: paper prompts. 60: map and QR pages. 90: small public or library walk.</dd></div>
+          <div><dt>Permissions</dt><dd>Temporary signage, image/artwork permissions, accessibility review, moderation rules.</dd></div>
+        </dl>
+      </article>
+
+      <article class="pilot">
+        <span class="tag">School/library test</span>
+        <h2>Scan Less / Notice More Walk</h2>
+        <dl>
+          <div><dt>Purpose</dt><dd>A healthy-technology walk where scanning is brief and attention returns to place.</dd></div>
+          <div><dt>Risk level</dt><dd><span class="risk-low">Low</span>: supervision and weather are the main constraints.</dd></div>
+          <div><dt>Council ask</dt><dd>Support one 20-minute test with a class, library group, or family walk.</dd></div>
+          <div><dt>Cost band</dt><dd>Tiny.</dd></div>
+          <div><dt>30 / 60 / 90</dt><dd>30: prompt cards. 60: landing page and worksheet. 90: trial walk and feedback.</dd></div>
+          <div><dt>Permissions</dt><dd>Site/event use if needed, school/guardian process, privacy rule: no personal data.</dd></div>
+        </dl>
+      </article>
+
+      <article class="pilot">
+        <span class="tag">Later / review first</span>
+        <h2>Sister City Song + Poster Exchange</h2>
+        <dl>
+          <div><dt>Purpose</dt><dd>One replyable artifact between Frankston and Susono-facing participants.</dd></div>
+          <div><dt>Risk level</dt><dd><span class="risk-high">High</span>: approval, translation, tokenism, timing.</dd></div>
+          <div><dt>Council ask</dt><dd>Identify the correct sister-city review contact before any public claim.</dd></div>
+          <div><dt>Cost band</dt><dd>Medium.</dd></div>
+          <div><dt>30 / 60 / 90</dt><dd>30: invitation brief. 60: draft only if review path opens. 90: exchange only if approved.</dd></div>
+          <div><dt>Permissions</dt><dd>Sister-city review, school/family publishing consent, translation check, pilot proposal label.</dd></div>
+        </dl>
+      </article>
+
+      <article class="pilot">
+        <span class="tag">Good second move</span>
+        <h2>Community-Made Resource Library</h2>
+        <dl>
+          <div><dt>Purpose</dt><dd>A shared shelf of printable prompts, worksheets, and maker resources.</dd></div>
+          <div><dt>Risk level</dt><dd><span class="risk-medium">Medium</span>: copyright, moderation, privacy, quality control.</dd></div>
+          <div><dt>Council ask</dt><dd>Host one library or school table and review contribution rules.</dd></div>
+          <div><dt>Cost band</dt><dd>Small.</dd></div>
+          <div><dt>30 / 60 / 90</dt><dd>30: template set. 60: static page and moderation checklist. 90: table/workshop test.</dd></div>
+          <div><dt>Permissions</dt><dd>Contributor licence, child-safe publishing, privacy review, protocol gate for place-based content.</dd></div>
+        </dl>
+      </article>
+    </section>
+
+    <section class="bottom">
+      <p class="note"><strong>First pick:</strong> Living Mural Lesson Wall. It is visible, bounded, useful, and easiest for Council to understand.</p>
+      <p class="note"><strong>Proof gate:</strong> no login, no child data, printable fallback, accessible mobile page, clear exit prompt.</p>
+      <p class="note"><strong>Protocol label:</strong> protocol pathway only - no permission implied.</p>
+    </section>
+
+    <footer>
+      <p><strong>Sources:</strong> pilots.html and 08 - Pilot Projects. <strong>Status:</strong> draft production one-pager, not public council material.</p>
+      <p>Frankston is the hero. Blue Snake Studio is the delivery engine.</p>
+    </footer>
+  </main>
+</body>
+</html>
