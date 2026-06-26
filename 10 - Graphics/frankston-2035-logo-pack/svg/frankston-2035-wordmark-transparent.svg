@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="360" viewBox="0 0 1400 360" role="img" aria-label="Frankston 2035 wordmark">
+  <rect width="1400" height="360" rx="32" fill="none"/>
+  <text x="64" y="172" font-family="DejaVu Sans, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="-3" fill="#12313B">Frankston 2035</text>
+  <text x="70" y="250" font-family="DejaVu Sans, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="9" fill="#087F9B">ART THAT LIVES</text>
+  <path d="M74 288 C252 255 428 316 705 282 C914 256 1104 268 1286 292" fill="none" stroke="#087F9B" stroke-width="11" stroke-linecap="round" opacity="0.85"/>
+</svg>

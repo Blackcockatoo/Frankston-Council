@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="700" viewBox="0 0 1800 700" role="img" aria-label="Frankston 2035 Art That Lives horizontal logo">
+  <rect width="1800" height="700" rx="44" fill="#FFFFFF"/>
+  <g transform="translate(105,92) scale(0.82)">
+  <rect width="512" height="512" rx="96" fill="none"/>
+  <circle cx="256" cy="256" r="184" fill="#E8ECEF" opacity="0.10"/>
+  <path d="M104 304 C156 246 215 244 272 260 C333 278 378 255 420 211" fill="none" stroke="#087F9B" stroke-width="32" stroke-linecap="round"/>
+  <path d="M103 252 C157 196 216 189 276 203 C333 216 372 195 414 151" fill="none" stroke="#005B73" stroke-width="24" stroke-linecap="round"/>
+  <path d="M118 355 C185 333 254 338 326 362 C360 373 390 371 419 356" fill="none" stroke="#12A56A" stroke-width="28" stroke-linecap="round"/>
+  <path d="M129 385 H383" stroke="#F6C650" stroke-width="16" stroke-linecap="round"/>
+  <path d="M169 360 V410 M233 358 V410 M298 363 V410 M363 356 V410" stroke="#005B73" stroke-width="10" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="356" cy="134" r="28" fill="#F6C650"/>
+  <path d="M150 128 C199 101 259 94 318 112" fill="none" stroke="#005B73" stroke-width="12" stroke-linecap="round" opacity="0.88"/>
+  <path d="M154 144 C216 119 276 117 332 134" fill="none" stroke="#F6C650" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+</g>
+  <text x="575" y="292" font-family="DejaVu Sans, Arial, sans-serif" font-size="104" font-weight="800" letter-spacing="-2" fill="#12313B">Frankston 2035</text>
+  <text x="581" y="372" font-family="DejaVu Sans, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="9" fill="#087F9B">ART THAT LIVES</text>
+  <path d="M583 430 H1650" stroke="#087F9B" stroke-width="12" stroke-linecap="round" opacity="0.85"/>
+  <path d="M583 468 C795 433 1005 498 1650 458" fill="none" stroke="#087F9B" stroke-width="10" stroke-linecap="round" opacity="0.8"/>
+</svg>
