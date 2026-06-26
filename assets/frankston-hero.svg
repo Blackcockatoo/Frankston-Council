@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Frankston 2035 civic hero image">
+  <rect width="1600" height="900" fill="#07151d"/>
+  <circle cx="280" cy="190" r="92" fill="#f4bd68"/>
+  <path d="M0 520 C250 470 430 555 650 505 C870 455 1000 555 1220 500 C1400 455 1510 485 1600 462 L1600 900 L0 900 Z" fill="#2b7d8c"/>
+  <path d="M140 520 L1320 415" stroke="#f5eee0" stroke-width="20" stroke-linecap="round" opacity="0.8"/>
+  <path d="M235 505 L235 655 M390 492 L390 680 M545 478 L545 642 M700 465 L700 690 M855 451 L855 648 M1010 438 L1010 680 M1165 424 L1165 632" stroke="#f5eee0" stroke-width="12" opacity="0.6"/>
+  <text x="90" y="810" fill="#fffaf0" font-family="Arial, sans-serif" font-size="82" font-weight="900">FRANKSTON 2035</text>
+  <text x="92" y="870" fill="#f4bd68" font-family="Arial, sans-serif" font-size="46" font-weight="800">ART THAT LIVES</text>
+</svg>
