@@ -6,7 +6,7 @@ Current site status: V1 is showable as a proposal platform. The items below are 
 
 ## Missing Content / Assets
 
-- Replace `assets/frankston-hero.png` with approved Frankston photography if available. Current asset is acceptable only as a draft visual.
+- Replace placeholder SVGs with approved Frankston photography only after rights, captions, owner/source, usage permission, and consent status are recorded.
 - Add approved image files for Image Library categories: Beach, Pier, Station, Schools, Nostalgia, Public Art, Sister City, Community.
 - Confirm image rights, captions, owner, source, alt text, and public-use permission for every real image.
 - Confirm final public contact details if `bluesssnakestudio@gmail.com` should not be the public route.

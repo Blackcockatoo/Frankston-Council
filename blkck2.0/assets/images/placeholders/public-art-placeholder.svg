@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Public art placeholder visual</title>
+  <desc id="desc">Abstract public art placeholder with wall blocks, poster panels, and artist permission label.</desc>
+  <rect width="1200" height="675" fill="#102027"/>
+  <path d="M0 142h1200M0 284h1200M0 426h1200M0 568h1200" stroke="#33444a" stroke-width="8"/>
+  <path d="M150 0v675M370 0v675M590 0v675M810 0v675M1030 0v675" stroke="#33444a" stroke-width="8"/>
+  <rect x="174" y="112" width="254" height="366" fill="#f3c33b"/>
+  <rect x="472" y="190" width="254" height="366" fill="#b9dddc"/>
+  <rect x="770" y="112" width="254" height="366" fill="#df8a5b"/>
+  <path d="M216 386c62-122 128-122 198 0M514 464c62-122 128-122 198 0M812 386c62-122 128-122 198 0" fill="none" stroke="#061820" stroke-width="16" stroke-linecap="round"/>
+  <path d="M212 176h168M510 254h168M808 176h168" stroke="#061820" stroke-width="14" stroke-linecap="round"/>
+  <rect x="54" y="54" width="276" height="54" fill="#061820" opacity=".86"/>
+  <text x="78" y="89" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Placeholder visual</text>
+  <rect x="54" y="118" width="312" height="42" fill="#ffffff" opacity=".92"/>
+  <text x="78" y="146" fill="#102027" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Artist permission required</text>
+</svg>

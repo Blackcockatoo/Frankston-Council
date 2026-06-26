@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Schools placeholder visual</title>
+  <desc id="desc">Abstract school placeholder with paper grid, learning blocks, and consent required label.</desc>
+  <rect width="1200" height="675" fill="#edf6f6"/>
+  <rect x="96" y="78" width="1008" height="520" fill="#ffffff" stroke="#102027" stroke-width="8"/>
+  <path d="M190 78v520M284 78v520M378 78v520M472 78v520M566 78v520M660 78v520M754 78v520M848 78v520M942 78v520M1036 78v520" stroke="#b9dddc" stroke-width="3"/>
+  <path d="M96 174h1008M96 270h1008M96 366h1008M96 462h1008" stroke="#b9dddc" stroke-width="3"/>
+  <rect x="180" y="168" width="250" height="72" fill="#f3c33b"/>
+  <rect x="468" y="264" width="250" height="72" fill="#0f4f68"/>
+  <rect x="756" y="360" width="250" height="72" fill="#df8a5b"/>
+  <path d="M236 512h728" stroke="#2f766d" stroke-width="18" stroke-linecap="round" stroke-dasharray="56 34"/>
+  <rect x="54" y="54" width="276" height="54" fill="#061820" opacity=".86"/>
+  <text x="78" y="89" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Placeholder visual</text>
+  <rect x="54" y="118" width="238" height="42" fill="#ffffff" opacity=".92"/>
+  <text x="78" y="146" fill="#102027" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Consent required</text>
+</svg>

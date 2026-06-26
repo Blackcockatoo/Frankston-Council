@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Pier placeholder visual</title>
+  <desc id="desc">Abstract pier placeholder with horizon blocks, deck lines, and rights check label.</desc>
+  <rect width="1200" height="675" fill="#082b3a"/>
+  <rect y="332" width="1200" height="343" fill="#0f4f68"/>
+  <path d="M0 332h1200" stroke="#f3c33b" stroke-width="8"/>
+  <path d="M235 675 520 350h160l285 325z" fill="#ddd6ca"/>
+  <path d="M360 675 565 350M840 675 635 350" stroke="#102027" stroke-width="12" opacity=".42"/>
+  <path d="M290 608h620M345 535h510M405 462h390M467 389h266" stroke="#102027" stroke-width="10" opacity=".38"/>
+  <path d="M224 394h752M178 448h844" stroke="#ffffff" stroke-width="8" opacity=".25"/>
+  <circle cx="950" cy="150" r="58" fill="#df8a5b"/>
+  <rect x="54" y="54" width="276" height="54" fill="#061820" opacity=".84"/>
+  <text x="78" y="89" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Placeholder visual</text>
+  <rect x="54" y="118" width="286" height="42" fill="#ffffff" opacity=".92"/>
+  <text x="78" y="146" fill="#102027" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Rights check required</text>
+</svg>

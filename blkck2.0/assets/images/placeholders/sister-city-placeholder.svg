@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Sister City placeholder visual</title>
+  <desc id="desc">Abstract sister-city placeholder with two landscape anchors, exchange path, and proposal-only label.</desc>
+  <rect width="1200" height="675" fill="#edf6f6"/>
+  <rect y="426" width="1200" height="249" fill="#0f4f68"/>
+  <path d="M0 426c130-46 230 46 360 0s230 46 360 0 230-46 480 0v249H0z" fill="#b9dddc"/>
+  <path d="M126 420 280 160l154 260z" fill="#082b3a"/>
+  <path d="M208 280h144" stroke="#ffffff" stroke-width="18" stroke-linecap="round" opacity=".78"/>
+  <circle cx="918" cy="246" r="132" fill="#df8a5b" opacity=".9"/>
+  <circle cx="918" cy="246" r="74" fill="#f3c33b" opacity=".88"/>
+  <path d="M392 334c128-100 278-100 432 0" fill="none" stroke="#102027" stroke-width="12" stroke-dasharray="24 24" stroke-linecap="round"/>
+  <path d="M792 304 850 334l-58 30" fill="none" stroke="#102027" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="54" y="54" width="276" height="54" fill="#061820" opacity=".86"/>
+  <text x="78" y="89" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Placeholder visual</text>
+  <rect x="54" y="118" width="204" height="42" fill="#ffffff" opacity=".92"/>
+  <text x="78" y="146" fill="#102027" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Proposal only</text>
+</svg>

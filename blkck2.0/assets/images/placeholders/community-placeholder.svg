@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Community placeholder visual</title>
+  <desc id="desc">Abstract community placeholder with activity table, contribution blocks, and consent required label.</desc>
+  <rect width="1200" height="675" fill="#f7f3eb"/>
+  <rect x="160" y="236" width="880" height="250" fill="#ffffff" stroke="#102027" stroke-width="10"/>
+  <rect x="220" y="302" width="166" height="118" fill="#f3c33b"/>
+  <rect x="430" y="302" width="166" height="118" fill="#b9dddc"/>
+  <rect x="640" y="302" width="166" height="118" fill="#df8a5b"/>
+  <rect x="850" y="302" width="112" height="118" fill="#2f766d"/>
+  <circle cx="276" cy="164" r="46" fill="#0f4f68"/>
+  <circle cx="458" cy="154" r="46" fill="#9d4b35"/>
+  <circle cx="642" cy="164" r="46" fill="#0f4f68"/>
+  <circle cx="824" cy="154" r="46" fill="#9d4b35"/>
+  <path d="M276 210v50M458 200v60M642 210v50M824 200v60" stroke="#102027" stroke-width="10" stroke-linecap="round" opacity=".56"/>
+  <path d="M198 552h804" stroke="#102027" stroke-width="16" stroke-linecap="round" opacity=".34"/>
+  <rect x="54" y="54" width="276" height="54" fill="#061820" opacity=".86"/>
+  <text x="78" y="89" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Placeholder visual</text>
+  <rect x="54" y="118" width="238" height="42" fill="#ffffff" opacity=".92"/>
+  <text x="78" y="146" fill="#102027" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Consent required</text>
+</svg>

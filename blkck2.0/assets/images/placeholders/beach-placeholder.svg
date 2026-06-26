@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Beach placeholder visual</title>
+  <desc id="desc">Abstract colour-block beach placeholder with waves, sand, and a pending approval label.</desc>
+  <rect width="1200" height="675" fill="#edf6f6"/>
+  <rect y="430" width="1200" height="245" fill="#f3c33b"/>
+  <rect y="270" width="1200" height="190" fill="#0f4f68"/>
+  <path d="M0 348c120-45 210 45 330 0s210 45 330 0 210 45 330 0 210 45 330 0v105H0z" fill="#b9dddc" opacity=".78"/>
+  <path d="M0 424c118-34 204 34 322 0s204 34 322 0 204 34 322 0 204 34 322 0v75H0z" fill="#ffffff" opacity=".65"/>
+  <circle cx="1015" cy="138" r="72" fill="#df8a5b"/>
+  <path d="M122 542h310M515 542h178M765 542h314" stroke="#9d4b35" stroke-width="10" stroke-linecap="round" opacity=".38"/>
+  <rect x="54" y="54" width="276" height="54" rx="0" fill="#061820" opacity=".82"/>
+  <text x="78" y="89" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Placeholder visual</text>
+  <rect x="54" y="118" width="344" height="42" rx="0" fill="#ffffff" opacity=".92"/>
+  <text x="78" y="146" fill="#102027" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Final image pending approval</text>
+</svg>

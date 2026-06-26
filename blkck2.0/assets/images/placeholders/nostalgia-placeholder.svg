@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Nostalgia placeholder visual</title>
+  <desc id="desc">Abstract nostalgia placeholder with archive cards, texture dots, and rights check label.</desc>
+  <rect width="1200" height="675" fill="#f7f3eb"/>
+  <g opacity=".4" fill="#9d4b35">
+    <circle cx="80" cy="80" r="4"/><circle cx="132" cy="80" r="4"/><circle cx="184" cy="80" r="4"/><circle cx="236" cy="80" r="4"/>
+    <circle cx="80" cy="132" r="4"/><circle cx="132" cy="132" r="4"/><circle cx="184" cy="132" r="4"/><circle cx="236" cy="132" r="4"/>
+    <circle cx="80" cy="184" r="4"/><circle cx="132" cy="184" r="4"/><circle cx="184" cy="184" r="4"/><circle cx="236" cy="184" r="4"/>
+  </g>
+  <rect x="170" y="142" width="360" height="430" fill="#ffffff" stroke="#102027" stroke-width="8" transform="rotate(-5 350 357)"/>
+  <rect x="265" y="90" width="360" height="430" fill="#ddd6ca" stroke="#102027" stroke-width="8" transform="rotate(4 445 305)"/>
+  <rect x="570" y="150" width="360" height="430" fill="#ffffff" stroke="#102027" stroke-width="8" transform="rotate(-2 750 365)"/>
+  <path d="M626 258h250M626 320h210M626 382h250M626 444h156" stroke="#9d4b35" stroke-width="16" stroke-linecap="round"/>
+  <rect x="316" y="190" width="224" height="146" fill="#0f4f68" opacity=".86"/>
+  <path d="M316 336 428 250l112 86z" fill="#f3c33b"/>
+  <rect x="54" y="54" width="276" height="54" fill="#061820" opacity=".86"/>
+  <text x="78" y="89" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Placeholder visual</text>
+  <rect x="54" y="118" width="286" height="42" fill="#ffffff" opacity=".92"/>
+  <text x="78" y="146" fill="#102027" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Rights check required</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Station placeholder visual</title>
+  <desc id="desc">Abstract station placeholder with platform, tracks, route blocks, and privacy-safe framing label.</desc>
+  <rect width="1200" height="675" fill="#ddd6ca"/>
+  <rect y="0" width="1200" height="246" fill="#39444a"/>
+  <rect x="88" y="80" width="240" height="88" fill="#f3c33b"/>
+  <rect x="360" y="80" width="146" height="88" fill="#b9dddc"/>
+  <rect x="538" y="80" width="146" height="88" fill="#ffffff"/>
+  <rect x="716" y="80" width="146" height="88" fill="#df8a5b"/>
+  <path d="M0 390h1200" stroke="#102027" stroke-width="28"/>
+  <path d="M0 460h1200" stroke="#102027" stroke-width="12" opacity=".5"/>
+  <path d="M238 675 548 390M962 675 652 390" stroke="#102027" stroke-width="18" opacity=".55"/>
+  <path d="M120 525h960M198 585h804" stroke="#ffffff" stroke-width="12" opacity=".68"/>
+  <path d="M96 304h1008" stroke="#0f4f68" stroke-width="16" stroke-dasharray="46 24"/>
+  <rect x="54" y="54" width="276" height="54" fill="#061820" opacity=".86"/>
+  <text x="78" y="89" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Placeholder visual</text>
+  <rect x="54" y="118" width="344" height="42" fill="#ffffff" opacity=".92"/>
+  <text x="78" y="146" fill="#102027" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700">Final image pending approval</text>
+</svg>

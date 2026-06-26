@@ -18,7 +18,7 @@ The site is built to help councillors, schools, libraries, artists, families, lo
 - `healthy-technology.html` - support charter for safe child-facing technology
 - `pilots.html` - compatibility page pointing to `public-art-pilots.html`
 - `style.css` - shared design system and responsive layout
-- `assets/frankston-hero.png` - current draft hero image
+- `assets/images/placeholders/` - safe abstract placeholder visuals for unapproved image categories
 - `downloads/` - printable starter sheets and templates
 - `TODO.md` - blocked items only
 
@@ -86,7 +86,7 @@ The Image Library, Sister City, and Healthy Technology pages are launch-ready as
 - Check every page on mobile and desktop.
 - Confirm all internal links resolve.
 - Open browser dev tools and confirm there are no console errors.
-- Confirm `assets/frankston-hero.png` loads, or replace it with approved photography.
+- Confirm placeholder SVGs load from `assets/images/placeholders/`, then replace category-by-category only after rights, consent, captions, and approvals are recorded.
 - Confirm `/downloads/` files are included in deployment.
 - Confirm `/drive-output/10-graphics/` is included if the Pilot Menu / Decision Sheet links should remain live.
 - Replace draft/placeholder assets before public promotion.

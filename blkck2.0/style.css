@@ -211,7 +211,7 @@ ol {
   background:
     linear-gradient(180deg, rgba(6, 24, 32, 0.22), rgba(6, 24, 32, 0.86)),
     linear-gradient(90deg, rgba(6, 24, 32, 0.86), rgba(6, 24, 32, 0.42)),
-    url("assets/frankston-hero.png");
+    url("assets/images/placeholders/beach-placeholder.svg");
   background-size: cover;
   background-position: center;
 }
@@ -231,6 +231,11 @@ ol {
   width: min(100%, var(--max));
   margin: 0 auto;
   padding: 5rem 1rem 3rem;
+  display: grid;
+  gap: 1.15rem;
+}
+
+.hero-copy {
   display: grid;
   gap: 1.15rem;
 }
@@ -269,6 +274,50 @@ ol {
 
 .hero-note strong {
   color: var(--gold);
+}
+
+.proposal-disclaimer {
+  width: fit-content;
+  max-width: 720px;
+  border-left: 6px solid var(--gold);
+  background: rgba(6, 24, 32, 0.78);
+  color: var(--white);
+  padding: 0.75rem 0.9rem;
+  font-weight: 900;
+}
+
+.hero-visual-panel {
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.hero-visual-panel img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.hero-visual-panel figcaption,
+.placeholder-frame figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.75rem;
+  background: rgba(6, 24, 32, 0.88);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hero-visual-panel figcaption span,
+.placeholder-frame figcaption span {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  padding: 0.24rem 0.4rem;
 }
 
 .button,
@@ -540,9 +589,77 @@ ol {
   gap: 1rem;
 }
 
+.image-system-grid {
+  margin-top: 1.2rem;
+}
+
 .gallery-card {
   padding: 0;
   overflow: hidden;
+}
+
+.visual-card {
+  display: grid;
+  align-content: start;
+}
+
+.placeholder-frame {
+  margin: 0;
+  background: var(--bay-night);
+}
+
+.placeholder-frame img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.card-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.next-action {
+  border-top: 1px solid var(--line);
+  padding-top: 0.55rem;
+}
+
+.visual-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--mist);
+}
+
+.card .visual-thumb,
+.pilot-card .visual-thumb,
+.download-card .visual-thumb {
+  margin-bottom: 0.25rem;
+}
+
+.poster-visual-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.mini-visual-card {
+  display: grid;
+  gap: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(6, 24, 32, 0.06);
+}
+
+.mini-visual-card p {
+  color: var(--ink-soft);
 }
 
 .image-slot {
@@ -871,6 +988,10 @@ ol {
   .system-map {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .poster-visual-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 980px) {
@@ -881,6 +1002,11 @@ ol {
 
   .hero h1 {
     font-size: 5.1rem;
+  }
+
+  .hero-inner {
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.72fr);
+    align-items: end;
   }
 
   .card-grid,
