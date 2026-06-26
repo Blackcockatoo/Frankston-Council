@@ -215,11 +215,21 @@ th { color: var(--deep); font-weight: 950; background: rgba(244,189,104,.24); }
 .pending-panel { background: rgba(244,189,104,.14); border: 1px solid rgba(244,189,104,.35); border-radius: 1rem; padding: 1.35rem; }
 .pending-pill { display: inline-flex; background: rgba(233,130,107,.2); color: #7a2612; border-radius: 999px; padding: .35rem .75rem; font-size: .82rem; font-weight: 900; margin-top: .5rem; }
 
+/* ── Asset gallery (image-library.html) ── */
+.image-slot img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.asset-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.asset-card { background: var(--white); border: 1px solid var(--line); border-radius: 1.35rem; overflow: hidden; }
+.asset-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+.asset-body { padding: 1.1rem; }
+.asset-body h3 { margin: 0 0 .3rem; font-size: 1rem; }
+.asset-use { font-size: .82rem; color: var(--muted); margin: 0 0 .7rem; line-height: 1.4; }
+.asset-missing { min-height: 160px; display: flex; align-items: center; justify-content: center; background: var(--paper); color: var(--muted); font-size: .85rem; font-weight: 700; text-align: center; padding: 1rem; border-bottom: 1px solid var(--line); }
+
 @media (max-width: 900px) {
   .site-header, .two-column, .split-heading, .protocol-grid, .rule-split, .pilot-card { grid-template-columns: 1fr; }
   .site-header { align-items: flex-start; flex-direction: column; }
   .signal-strip, .feature-grid, .loop-grid, .pilot-preview, .quote-row, .charter-grid, .charter-index, .poster-gallery, .visual-lead-grid, .artwork-grid, .poster-image-row { grid-template-columns: 1fr; }
-  .card-grid, .download-grid, .pilot-grid, .media-grid, .contact-route-grid, .gallery-grid { grid-template-columns: 1fr; }
+  .card-grid, .download-grid, .pilot-grid, .media-grid, .contact-route-grid, .gallery-grid, .asset-gallery { grid-template-columns: 1fr; }
   .rules-list { columns: 1; }
   h1 { font-size: clamp(3rem, 16vw, 6rem); }
 }

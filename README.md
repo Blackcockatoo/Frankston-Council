@@ -7,15 +7,17 @@ Static site for the **Frankston 2035 - Art That Lives** civic creativity proposa
 | Page | Description |
 |---|---|
 | `index.html` | Homepage and core call to action |
+| `start-here.html` | Plain-English onboarding: what it is, who it's for, first steps |
 | `vision.html` | What the project is and why it matters |
 | `public-art-pilots.html` | Pilot menu and recommended first tests |
+| `pilot-01-living-mural.html` | Complete Pilot 01 — Living Mural Lesson Wall full brief |
 | `pilots.html` | Compatibility route (simpler overview) |
 | `schools.html` | Teacher and library pathway |
 | `healthy-technology.html` | Healthy Technology Charter |
-| `sister-city.html` | Frankston-Susono exchange pathway |
+| `sister-city.html` | Frankston-Susono exchange pathway (proposed only) |
 | `print-pack.html` | Posters, flyer, QR template, lesson sheets |
-| `posters.html` | Printable poster seed gallery |
-| `image-library.html` | Visual library |
+| `image-library.html` | Campaign image shelf — status, alt text, usage guidance |
+| `posters.html` | Printable poster seed gallery (ten A4 seeds) |
 | `media-contact.html` | Press summary and contact |
 | `404.html` | Not found page |
 
