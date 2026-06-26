@@ -1,65 +1,51 @@
-# Blue $nake Studio — BLKCK2 Creative Portal
+# Frankston 2035 — Art That Lives
 
-Static site deploy for the **Blue $nake Studio / BLKCK2** creative portal, with the **Frankston 2035 - Art That Lives** civic project as a sub-portal.
+Static site for the **Frankston 2035 - Art That Lives** civic creativity proposal.
 
-## Site Structure
+## Pages
 
-```
-/                       → BLKCK2 creative portal (Blue $nake Studio)
-/frankston/             → Frankston 2035 civic proposal site
-/01_auralia/ ... /24/   → BLKCK2 image library (numbered category folders)
-/apps/                  → BLKCK2 mini-apps (Magic Cube, Moss60 Oracle)
-/documents/             → PDFs and documents (Pulse of Krishna, OSS-734G, etc.)
-/downloads/             → Print packs, QR drops, colouring pages, lyric sheets
-/data/                  → JS data files (gallery-items.js, studio-sections.js)
-```
+| Page | Description |
+|---|---|
+| `index.html` | Homepage and core call to action |
+| `vision.html` | What the project is and why it matters |
+| `public-art-pilots.html` | Pilot menu and recommended first tests |
+| `pilots.html` | Compatibility route (simpler overview) |
+| `schools.html` | Teacher and library pathway |
+| `healthy-technology.html` | Healthy Technology Charter |
+| `sister-city.html` | Frankston-Susono exchange pathway |
+| `print-pack.html` | Posters, flyer, QR template, lesson sheets |
+| `posters.html` | Printable poster seed gallery |
+| `image-library.html` | Visual library |
+| `media-contact.html` | Press summary and contact |
+| `404.html` | Not found page |
 
-## Root Site — BLKCK2
+## Assets
 
-The main portal. Dark, artistic, interactive.
-
-- `index.html` — BLKCK2 homepage (intro video, gallery tree, three doors)
-- `styles.css` — BLKCK2 dark design system
-- `script.js` — gallery tree + interactive experience
-- `black-wing-crew.html`, `magic-cube.html`, `meta-pet.html`, `proof-wall.html`, `print.html`, `store.html`, `teacher-tools.html`, `field-guide.html`, `gov.html`, `qr-portal.html`, `start.html`, `press-kit.html`, `privacy-policy.html`, `packs.html`, `site-health.html`, `strongman-tracker.html`
-
-## Frankston 2035 Sub-Portal
-
-Civic creativity proposal for Frankston City Council.
-
-- `frankston/index.html` — Frankston 2035 homepage
-- `frankston/vision.html`, `frankston/public-art-pilots.html`, `frankston/schools.html`
-- `frankston/sister-city.html`, `frankston/print-pack.html`, `frankston/media-contact.html`
-- `frankston/posters.html`, `frankston/pilots.html`, `frankston/healthy-technology.html`, `frankston/image-library.html`
-- `frankston/style.css` — Frankston civic design system
-- `frankston/assets/` — Frankston images and artwork
+- `assets/images/` — campaign artwork and poster images
+- `assets/frankston-hero.svg` — lightweight civic hero SVG
+- `downloads/` — printable starter sheets and templates
+- `style.css` — shared design system
 
 ## Deploy
 
-**Vercel static deploy. No build step.**
-
-Root is served directly. `vercel.json` handles clean URLs and security headers.
+Vercel static deploy — root served directly, clean URLs on.
 
 ```bash
 # Local dev
 python -m http.server 8080
-# Then open http://localhost:8080
 ```
 
-## Key Identity Rules
+## Content Rules
 
-### BLKCK2 / Blue $nake Studio
-- Dark, strange, artistic, musical, memetic, useful, alive.
-- B$S / Black Wing Crew / Neon Venom / Auralia energy.
-- Strong homepage navigation first.
+1. Frankston is the hero.
+2. Blue Snake Studio is the engine, maker, or stamp — not the headline.
+3. Start small, think generational.
+4. Every big idea needs a low-cost pilot.
+5. Art must be useful, not just beautiful.
+6. Technology must give attention back to real places and real people.
+7. First Nations content is permission-based and guided by appropriate Traditional Owner organisations.
+8. Sister City content is real exchange, not decorative symbolism.
+9. Every page points to practical next steps.
+10. The ecosystem is the artwork.
 
-### Frankston 2035
-- Frankston is the hero. Blue Snake Studio is the engine, not the headline.
-- Every page must have a practical next step.
-- First Nations content is protocol-only — no content without guidance from appropriate Traditional Owner organisations.
-- Sister City content is real exchange, not decorative symbolism.
-- Technology must give attention back to real places and real people.
-
-## Cleanup Report
-
-See `CLEANUP_REPORT.md` for full audit of what was integrated, archived, and what remains.
+See `CLEANUP_REPORT.md` for the full integration audit.

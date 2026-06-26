@@ -1,136 +1,81 @@
-# CLEANUP REPORT — BLKCK2 Integration
+# CLEANUP REPORT — blkck2.0 Integration into Frankston 2035
 **Date:** 2026-06-26  
-**Branch:** `claude/blkck2-cleanup-integration-e31uu8`  
-**Engineer:** Claude (automated cleanup + integration)
+**Branch:** `claude/blkck2-cleanup-integration-e31uu8`
 
 ---
 
 ## What Was Found in `blkck2.0/`
 
-The `blkck2.0/` folder contained two completely separate sites mixed into one folder:
+The `blkck2.0/` folder contained two separate things mixed together:
 
-### `blkck2.0/blkck-main/` — The Real BLKCK2 Creative Portal
-Previously deployed at `blkck2.com` via Netlify. Contained:
-- Full dark artistic portal homepage with intro video, gallery tree, interactive JS
-- 24 numbered image folders (01_auralia through 24_auralia_prints) — ~150 image files
-- Pages: `black-wing-crew.html`, `magic-cube.html`, `meta-pet.html`, `field-guide.html`, `gov.html`, `print.html`, `proof-wall.html`, `store.html`, `start.html`, `teacher-tools.html`, `packs.html`, `qr-portal.html`, `press-kit.html`, `privacy-policy.html`, `site-health.html`, `strongman-tracker.html`
-- Apps: `apps/bs-word-cube.html`, `apps/moss60-oracle-warden.html` with 12 app preview images
-- Data: `data/gallery-items.js`, `data/studio-sections.js`
-- Documents: 3 PDFs + `oss-734g-known-unknowns-register.html`
-- Downloads: 14 HTML/zip download packs (colouring pages, QR packs, lyric sheets, etc.)
-- Content docs: `CODEX_PROMPT.md`, `GALLERY_LABELS.md`, `GALLERY_ROOMS.md`, `SITE_MAP.md`, etc.
-- PWA: `manifest.webmanifest`, `sw.js`, `icon.svg`, `icon-192.png`, `icon-512.png`
-- Videos: 5 MP4 files (YTShort intro + 4 source videos, ~23MB total)
-- Build: `netlify.toml`, `_redirects`, `CNAME` (Netlify-specific)
+### `blkck2.0/blkck-main/` — The BLKCK2 Creative Portal (separate site, not integrated)
+This is the Blue $nake Studio creative portal (`blkck2.com`), a separate deployment.
+It was NOT integrated into this repo. It belongs in its own repo/deploy.
 
-### `blkck2.0/` root level — Older Frankston 2035 Pages
-An older/parallel version of the Frankston 2035 civic proposal site:
-- Extended pages: `vision.html`, `image-library.html`, `public-art-pilots.html`, `schools.html`, `sister-city.html`, `print-pack.html`, `media-contact.html`
-- Same pages as root (older versions): `index.html`, `posters.html`, `pilots.html`, `healthy-technology.html`, `style.css`
-- Download templates: `frankston-2035-flyer.html`, `lesson-pack-starter.html`, `qr-card-template.html`, `student-artwork-pathway.html`
-- Duplicate assets: `assets/frankston-hero.png`
+### `blkck2.0/` root level — Extended Frankston 2035 Pages (integrated)
+Older/extended version of the Frankston 2035 site containing useful pages not yet in root:
+- `vision.html` — full vision and strategy page
+- `image-library.html` — visual library with image categories
+- `public-art-pilots.html` — detailed public art pilot proposals
+- `schools.html` — teacher and library pathway
+- `sister-city.html` — Frankston-Susono exchange pathway
+- `print-pack.html` — printable posters, flyer, QR templates, lesson sheets
+- `media-contact.html` — press summary and contact details
 
-### `blkck2.0/drive-output/` — Docs Mirror
-Markdown/doc files mirroring content already in the numbered root folders (`00 - README`, `07 - Healthy Technology`, `08 - Pilot Projects`, `10 - Graphics`). Duplicate, not deployed.
+### `blkck2.0/downloads/` — Frankston Download Templates (integrated)
+- `frankston-2035-flyer.html` — event flyer template
+- `lesson-pack-starter.html` — classroom starter sheet
+- `qr-card-template.html` — printable QR card (QR pending)
+- `student-artwork-pathway.html` — student participation pathway
+
+### `blkck2.0/drive-output/` — Docs Mirror (archived/deleted)
+Markdown files duplicating content already in the numbered root folders. Not deployed.
 
 ---
 
 ## What Was Integrated
 
-### BLKCK2 — Now The Root Site
-All files from `blkck2.0/blkck-main/` moved to repo root:
-- `index.html` (BLKCK2 dark portal homepage replaces Frankston homepage at root)
-- `styles.css`, `script.js`, `sw.js`, `manifest.webmanifest`, `robots.txt`, `sitemap.xml`
-- All 24 numbered image folders at root level
-- All HTML pages at root level
-- `data/`, `apps/`, `content/`, `docs/`, `documents/`, `downloads/`
-- All 5 video files
-- PWA icons
+All Frankston-specific pages from `blkck2.0/` moved to repo root alongside existing pages:
 
-### Frankston 2035 — Now a Sub-Portal at `/frankston/`
-Files moved to `frankston/` subfolder:
-- `frankston/index.html` — Frankston 2035 homepage (best version from old root)
-- `frankston/posters.html`, `frankston/pilots.html`, `frankston/healthy-technology.html`
-- Extended pages from `blkck2.0/`: `vision.html`, `image-library.html`, `public-art-pilots.html`, `schools.html`, `sister-city.html`, `print-pack.html`, `media-contact.html`
-- Download templates: `frankston/downloads/frankston-2035-flyer.html`, `lesson-pack-starter.html`, `qr-card-template.html`, `student-artwork-pathway.html`
-- `frankston/assets/` — all Frankston images (frankston-hero.png, campaign art, posters)
-- `frankston/style.css` — Frankston civic design system
+| File | Source | Status |
+|---|---|---|
+| `vision.html` | `blkck2.0/vision.html` | Added to root |
+| `image-library.html` | `blkck2.0/image-library.html` | Added to root |
+| `public-art-pilots.html` | `blkck2.0/public-art-pilots.html` | Added to root |
+| `schools.html` | `blkck2.0/schools.html` | Added to root |
+| `sister-city.html` | `blkck2.0/sister-city.html` | Added to root |
+| `print-pack.html` | `blkck2.0/print-pack.html` | Added to root |
+| `media-contact.html` | `blkck2.0/media-contact.html` | Added to root |
+| `downloads/*.html` | `blkck2.0/downloads/` | Added to `downloads/` |
 
-### Navigation Cross-Links Added
-- BLKCK2 root nav: "Frankston 2035" link → `/frankston/`
-- BLKCK2 proof strip: "Frankston 2035" live item card
-- All frankston/ pages: "← B$S Studio" back link in nav
-- frankston/index.html nav expanded: added Vision, Schools, Print Pack links
-
-### Path Fixes Applied
-- All `src="/assets/images/..."` → `src="assets/images/..."` in frankston/ pages
-- OG image meta tags updated to `/frankston/assets/images/...` in frankston/ pages
-- Two-CSS-file confusion resolved: `style.css` = Frankston, `styles.css` = BLKCK2
+Navigation updated in `index.html` to include all new pages.
 
 ---
 
-## What Was Archived / Deleted
+## What Was Deleted / Archived
 
-- `blkck2.0/` folder entirely removed (all useful content integrated)
-- `blkck2.0/drive-output/` — docs mirror, not deployed (content exists in numbered root folders)
-- `blkck2.0/assets/frankston-hero.png` — duplicate of `frankston/assets/images/frankston-hero.png`
-- `blkck2.0/*.html` Frankston root-level duplicates — better versions kept in `frankston/`
-- `netlify.toml` and `_redirects` from blkck-main — Netlify-specific, kept for reference in `/docs/`
+- `blkck2.0/blkck-main/` — BLKCK2 creative portal (separate site, deleted from this repo)
+- `blkck2.0/drive-output/` — docs mirror (deleted)
+- `blkck2.0/assets/frankston-hero.png` — duplicate of `assets/images/frankston-hero.png`
+- `blkck2.0/` root Frankston duplicates — outdated versions of pages already at root
 
 ---
 
 ## What Remains Broken or Needs Attention
 
-### Known Issues
-1. **CNAME file at root** — contains `blkck2.com` which conflicts with Vercel hosting. If deploying to Vercel at a different domain, remove or update CNAME.
-2. **Video files in git** — 5 MP4s (~23MB) are committed directly. Should use a CDN (Cloudinary, Bunny.net, or YouTube embeds) for production.
-3. **BLKCK2 `canonical` tag** — all pages reference `https://blkck2.com/` in canonical tags. Update if deploying to a different domain.
-4. **`frankston/image-library.html`** — references images in `assets/` folder that use placeholder boxes instead of real images. Photo rights and approved images still needed (see `blkck2.0/TODO.md`).
-5. **QR codes** — `downloads/qr-card-template.html` has `QR PENDING` placeholders. Final QR codes needed after URL/domain stabilises.
-6. **frankston/pilots.html vs frankston/public-art-pilots.html** — two overlapping pilot pages. `pilots.html` is the simpler current version; `public-art-pilots.html` is the extended version from blkck2.0. Both serve different depths. Consider merging or clarifying which is canonical.
-7. **`frankston/downloads/` CSS** — the download HTML files may reference `style.css` expecting to find it relative to themselves, but `style.css` is now one directory up (`../style.css`). Needs a path check.
-
-### Missing Assets (Already Missing Before Cleanup)
-- Approved Frankston photography for `image-library.html` categories
-- Final QR codes for print templates
-- Confirmed First Nations / Susono content (protocol-blocked, intentional)
+1. **`image-library.html`** — placeholder image boxes for most categories. Approved photography needed before public promotion.
+2. **QR codes in `downloads/qr-card-template.html`** — marked `QR PENDING`. Final codes needed after URLs/hosting stabilise.
+3. **`downloads/qr-card-template.html` CSS path** — references `../style.css`, correct for its location in `downloads/`.
+4. **`pilots.html` vs `public-art-pilots.html`** — both exist. `pilots.html` is a simpler overview; `public-art-pilots.html` is the full detailed version. Nav now points to the detailed version. `pilots.html` can be kept as a lighter entry point or eventually retired.
+5. **First Nations content** — protocol-only. No content without guidance from appropriate Traditional Owner organisations.
+6. **Susono exchange** — proposed only. No formal approval exists yet.
 
 ---
 
 ## Next Best Tasks
 
-1. **Domain + CNAME fix** — Decide: is this deploying to `blkck2.com` or another Vercel domain? Update `CNAME`, all `canonical` meta tags, and OG image URLs accordingly. (~30 min)
-
-2. **Move video files to CDN** — Replace `<video src="YTShort_20June2026_13_12_14.mp4">` in `index.html` with a YouTube embed or Cloudinary URL. Remove MP4s from git. Use `.gitignore` to prevent re-adding. (~1 hour)
-
-3. **Fix frankston/downloads/ CSS paths** — Audit all 4 download HTML files in `frankston/downloads/`. Update `href="style.css"` to `href="../style.css"` so they find the parent Frankston stylesheet. (~15 min)
-
-4. **Merge or retire pilot page duplication** — Decide whether `frankston/pilots.html` or `frankston/public-art-pilots.html` is the canonical pilot page. Redirect or remove the other. (~20 min)
-
-5. **Add real approved imagery** — Replace `frankston/assets/images/` placeholder-category images in `image-library.html` with approved photography once rights/permissions are confirmed. This is the biggest remaining content gap for the Frankston 2035 public launch.
-
----
-
-## Deploy / Build Status
-
-- **Deploy method:** Vercel static, no build step. Root is served directly.
-- **Root route `/`:** BLKCK2 creative portal (index.html, styles.css, script.js)  
-- **Sub-route `/frankston/`:** Frankston 2035 civic proposal site  
-- **404 route:** BLKCK2-branded 404.html  
-- **PWA:** manifest.webmanifest + sw.js in place at root  
-- **`npm run check`:** Verifies core files present, exits clean  
-- **Vercel `cleanUrls: true`:** `/frankston/vision` → `frankston/vision.html` ✓
-
-## File Count Summary
-
-| Location | Type | Count |
-|---|---|---|
-| Root HTML pages | BLKCK2 | 17 pages |
-| `/frankston/` pages | Frankston 2035 | 12 pages |
-| `/01_auralia/` through `/24_auralia_prints/` | Images | ~150 files |
-| `/apps/` | Mini apps | 2 HTML + 12 images |
-| `/documents/` | PDFs + HTML | 4 files |
-| `/downloads/` | Print packs | 14 files + 3 ZIPs |
-| `/data/` | JS data | 2 files |
-| `/frankston/downloads/` | Frankston templates | 4 files |
-| `/frankston/assets/` | Frankston images | 15 files |
+1. **Add approved photography** to `image-library.html` categories (Beach, Pier, Station, Schools, Nostalgia, Public Art, Sister City, Community). Confirm rights/permissions before publishing.
+2. **Finalise QR codes** in `downloads/qr-card-template.html` once hosting URL is confirmed.
+3. **Confirm pilot candidate** — which pilot is the actual Stage One test? Update `public-art-pilots.html` to highlight it clearly.
+4. **Add image credits** to all images now in `assets/images/` — source, rights, photographer, public-use status.
+5. **Update nav on all subpages** — `healthy-technology.html`, `posters.html`, `pilots.html` have the older 4-item nav. Update to the full extended nav now that more pages exist.
