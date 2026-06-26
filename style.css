@@ -31,6 +31,7 @@ a { color: inherit; }
 .site-nav a:hover, .site-nav a[aria-current="page"] { background: rgba(255,255,255,.12); color: var(--white); }
 .hero { min-height: 82vh; display: grid; align-items: end; padding: clamp(3rem, 8vw, 8rem) clamp(1rem, 6vw, 5rem); color: var(--white); background: linear-gradient(rgba(7,21,29,.24), rgba(7,21,29,.82)), radial-gradient(circle at 80% 20%, rgba(244,189,104,.38), transparent 22rem), linear-gradient(135deg, #0b3344, #07151d 62%); overflow: hidden; position: relative; }
 .hero::after { content: ""; position: absolute; inset: auto -5vw -5rem -5vw; height: 42%; background: repeating-linear-gradient(178deg, rgba(255,255,255,.18) 0 1px, transparent 1px 18px), linear-gradient(180deg, transparent, rgba(154,217,222,.22)); opacity: .55; transform: rotate(-1deg); }
+.hero-home { background: linear-gradient(to bottom, rgba(7,21,29,.28) 0%, rgba(7,21,29,.88) 60%, rgba(7,21,29,.96) 100%), url('assets/images/frankston-hero.png') center top / cover no-repeat; }
 .hero-copy, .section-inner, .poster-gallery, .pilot-list { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; position: relative; z-index: 1; }
 .eyebrow { margin: 0 0 .75rem; color: var(--sea); font-weight: 950; letter-spacing: .16em; text-transform: uppercase; font-size: .78rem; }
 .hero .eyebrow, .poster-wall .eyebrow, .bay .eyebrow, .rules-block .eyebrow { color: var(--gold); }
@@ -78,6 +79,9 @@ p, li, dd, td, th { font-size: 1.02rem; line-height: 1.65; }
 .image-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .image-frame figcaption { padding: .85rem 1rem; color: var(--muted); background: rgba(255,250,240,.92); font-weight: 850; line-height: 1.35; }
 .hero-image img { height: auto; aspect-ratio: 1840 / 855; }
+.image-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.8rem; }
+.image-strip-item { border-radius: 1rem; overflow: hidden; }
+.image-strip-item img { width: 100%; height: 220px; object-fit: cover; display: block; }
 .brand-lockup { margin: 1.4rem 0 0; padding: 1.1rem; border: 1px solid var(--line); border-radius: .5rem; background: rgba(255,255,255,.78); }
 .brand-lockup img { display: block; width: 100%; height: auto; }
 .image-gallery .split-heading > p { color: var(--muted); font-weight: 650; }
@@ -215,16 +219,20 @@ th { color: var(--deep); font-weight: 950; background: rgba(244,189,104,.24); }
 .pending-panel { background: rgba(244,189,104,.14); border: 1px solid rgba(244,189,104,.35); border-radius: 1rem; padding: 1.35rem; }
 .pending-pill { display: inline-flex; background: rgba(233,130,107,.2); color: #7a2612; border-radius: 999px; padding: .35rem .75rem; font-size: .82rem; font-weight: 900; margin-top: .5rem; }
 
-/* ── Wall Art Pack ── */
-.wall-art-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-.wall-art-card { background: var(--white); border: 1px solid var(--line); border-radius: 1.35rem; overflow: hidden; }
-.wall-art-preview { background: linear-gradient(145deg, #07151d 0%, #0d2d3d 55%, #162e3d 100%); min-height: 300px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.wall-art-preview::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(156deg, rgba(244,189,104,.055) 0 1px, transparent 1px 22px); pointer-events: none; }
-.wall-art-num { position: absolute; bottom: 1rem; right: 1.2rem; font-size: 5rem; font-weight: 950; color: rgba(244,189,104,.18); line-height: 1; z-index: 1; letter-spacing: -.05em; }
-.wall-art-preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 2; }
-.wall-art-body { padding: 1.35rem; }
-.wall-art-body h3 { margin: 0 0 .4rem; }
-.wall-art-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+/* ── Wall Art Pack (CSS-only civic artwork cards) ── */
+.wall-art-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 2rem; }
+.wall-art-card { min-height: 460px; display: flex; flex-direction: column; gap: .5rem; padding: clamp(1.6rem, 5vw, 3.2rem); overflow: hidden; position: relative; border-radius: 1.35rem; color: var(--white); box-shadow: 0 12px 40px rgba(7,21,29,.32); }
+.wall-art-card::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 78% 22%, rgba(244,189,104,.2), transparent 14rem), repeating-linear-gradient(156deg, rgba(255,255,255,.05) 0 1px, transparent 1px 22px); pointer-events: none; }
+.wall-art-label { color: rgba(244,189,104,.72); font-size: .72rem; font-weight: 950; letter-spacing: .16em; text-transform: uppercase; position: relative; z-index: 1; }
+.wall-art-card h3 { margin: 0 0 .6rem; font-size: clamp(1.9rem, 4.5vw, 3.4rem); line-height: .88; letter-spacing: -.045em; color: var(--gold); position: relative; z-index: 1; }
+.wall-art-slogan { font-size: clamp(.95rem, 1.8vw, 1.25rem); font-weight: 850; line-height: 1.2; color: rgba(255,255,255,.88); margin: 0; position: relative; z-index: 1; }
+.wall-art-purpose { font-size: .85rem; line-height: 1.5; color: rgba(255,255,255,.6); margin: 0; border-top: 1px solid rgba(255,255,255,.12); padding-top: .75rem; position: relative; z-index: 1; }
+.wall-art-card footer { margin-top: auto; padding-top: 1.5rem; font-size: .72rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.28); position: relative; z-index: 1; }
+.wall-art-num { position: absolute; bottom: 0; right: .4rem; font-size: clamp(5rem, 12vw, 9rem); font-weight: 950; letter-spacing: -.06em; line-height: .82; color: rgba(244,189,104,.08); z-index: 0; pointer-events: none; }
+.wall-gold { background: linear-gradient(145deg, #07151d 0%, #14384d 100%); }
+.wall-sea  { background: linear-gradient(145deg, #071519 0%, #0d3040 100%); }
+.wall-warm { background: linear-gradient(145deg, #0d1218 0%, #1a2f3c 100%); }
+.wall-deep { background: linear-gradient(145deg, #040c12 0%, #0d2530 100%); }
 
 /* ── Asset gallery (image-library.html) ── */
 .image-slot img { width: 100%; height: 200px; object-fit: cover; display: block; }
@@ -239,7 +247,7 @@ th { color: var(--deep); font-weight: 950; background: rgba(244,189,104,.24); }
 @media (max-width: 900px) {
   .site-header, .two-column, .split-heading, .protocol-grid, .rule-split, .pilot-card { grid-template-columns: 1fr; }
   .site-header { align-items: flex-start; flex-direction: column; }
-  .signal-strip, .feature-grid, .loop-grid, .pilot-preview, .quote-row, .charter-grid, .charter-index, .poster-gallery, .visual-lead-grid, .artwork-grid, .poster-image-row { grid-template-columns: 1fr; }
+  .signal-strip, .feature-grid, .loop-grid, .pilot-preview, .quote-row, .charter-grid, .charter-index, .poster-gallery, .visual-lead-grid, .artwork-grid, .poster-image-row, .image-strip { grid-template-columns: 1fr; }
   .card-grid, .download-grid, .pilot-grid, .media-grid, .contact-route-grid, .gallery-grid, .asset-gallery, .wall-art-grid { grid-template-columns: 1fr; }
   .rules-list { columns: 1; }
   h1 { font-size: clamp(3rem, 16vw, 6rem); }
@@ -254,10 +262,6 @@ th { color: var(--deep); font-weight: 950; background: rgba(244,189,104,.24); }
   .content-band, .rules-block, .page-hero { padding: 1rem 0; background: white !important; color: black !important; }
   a { text-decoration: none; }
   /* Wall Art Pack — one artwork per page */
-  body.wall-art-page .wall-art-grid { display: block; }
-  body.wall-art-page .wall-art-card { break-after: page; page-break-after: always; border: none; border-radius: 0; box-shadow: none; background: white; }
-  body.wall-art-page .wall-art-preview { min-height: calc(100vh - 24mm); background: #07151d !important; }
-  body.wall-art-page .wall-art-preview img { position: static; width: 100%; height: auto; max-height: calc(100vh - 24mm); object-fit: contain; }
-  body.wall-art-page .wall-art-body, body.wall-art-page .wall-art-actions { display: none; }
-  body.wall-art-page .wall-art-num { display: none; }
+  body.wall-art-page .wall-art-grid { display: block; width: 100%; margin: 0; }
+  body.wall-art-page .wall-art-card { break-after: page; page-break-after: always; min-height: calc(100vh - 24mm); border-radius: 0; box-shadow: none; }
 }
