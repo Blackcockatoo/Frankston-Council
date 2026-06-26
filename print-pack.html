@@ -18,7 +18,9 @@
     .pack-section { padding:3rem 1.5rem; }
     .pack-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(245px,1fr)); gap:1.4rem; }
     .pack-card { background:#0a1518; border:1px solid rgba(201,154,74,.5); box-shadow:0 18px 50px rgba(0,0,0,.28); padding:1rem; }
-    .pack-card img { width:100%; display:block; background:#111; border:1px solid rgba(255,255,255,.08); aspect-ratio:2480/3508; object-fit:contain; }
+    .pack-card.pending { opacity:.72; border-style:dashed; }
+    .pack-card img, .poster-placeholder { width:100%; display:grid; place-items:center; background:#111; border:1px solid rgba(255,255,255,.08); aspect-ratio:2480/3508; object-fit:contain; color:#f1d386; text-align:center; padding:1rem; box-sizing:border-box; }
+    .poster-placeholder strong { display:block; font-family:Georgia,'Times New Roman',serif; font-size:1.4rem; margin-bottom:.5rem; }
     .pack-card h2 { color:#f1d386; font-family:Georgia,'Times New Roman',serif; font-size:1.25rem; margin:1rem 0 .35rem; }
     .pack-card p { color:#d8c8a5; margin:.25rem 0 1rem; }
     .pack-actions { display:flex; flex-wrap:wrap; gap:.55rem; }
@@ -28,7 +30,7 @@
     .asset-list article { border:1px solid rgba(201,154,74,.36); padding:1rem; background:#091518; }
     .asset-list h3 { color:#f1d386; margin:.1rem 0 .35rem; }
     .note-box { border-left:5px solid #c99a4a; background:#0b171a; padding:1rem 1.2rem; color:#d8c8a5; margin-top:1.5rem; }
-    @media print { .site-header,.site-footer,.no-print,.pack-actions,.print-pack-hero { display:none !important; } body.print-pack-page { background:white; color:black; } .pack-section { padding:0; } .pack-grid { display:block; } .pack-card { break-after:page; border:none; box-shadow:none; padding:0; } .pack-card h2,.pack-card p { display:none; } .pack-card img { border:none; width:100%; height:auto; } }
+    @media print { .site-header,.site-footer,.no-print,.pack-actions,.print-pack-hero { display:none !important; } body.print-pack-page { background:white; color:black; } .pack-section { padding:0; } .pack-grid { display:block; } .pack-card { break-after:page; border:none; box-shadow:none; padding:0; } .pack-card h2,.pack-card p,.poster-placeholder { display:none; } .pack-card img { border:none; width:100%; height:auto; } }
   </style>
 </head>
 <body class="print-pack-page">
@@ -48,8 +50,8 @@
     <section class="print-pack-hero">
       <div class="section-inner">
         <p class="eyebrow">Print-ready working pack</p>
-        <h1>Poster Seeds<br>01-04</h1>
-        <p>SVG source assets for the first four Frankston 2035 poster seeds, plus an index of the Frankston x Susono Japanese-English bilingual sheets generated in this run.</p>
+        <h1>Poster Seeds<br>01-10</h1>
+        <p>SVG source assets for the Frankston 2035 poster seed series. Seeds 01-06 and 08-10 are live in this repo; Seed 07 is marked pending until the finished artwork is generated.</p>
         <p class="maker-stamp">Independent civic proposal by Blue Snake Studio. Not an official Frankston City Council website.</p>
       </div>
     </section>
@@ -63,30 +65,16 @@
         <button class="button primary no-print" type="button" onclick="window.print()">Print visible pack</button>
       </div>
       <div class="pack-grid">
-        <article class="pack-card" id="seed-01">
-          <img src="assets/print-pack/poster-seeds/poster-seed-01-make-the-wall-teach.svg" alt="Poster Seed 01 Make The Wall Teach">
-          <h2>01 — Make The Wall Teach</h2>
-          <p>A mural is a moment. A living mural is a relationship.</p>
-          <div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-01-make-the-wall-teach.svg">Open SVG</a></div>
-        </article>
-        <article class="pack-card" id="seed-02">
-          <img src="assets/print-pack/poster-seeds/poster-seed-02-community-learns-to-create.svg" alt="Poster Seed 02 Community Learns To Create">
-          <h2>02 — Community Learns To Create</h2>
-          <p>The greatest public artwork is not a mural. It is a community that learns to create.</p>
-          <div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-02-community-learns-to-create.svg">Open SVG</a></div>
-        </article>
-        <article class="pack-card" id="seed-03">
-          <img src="assets/print-pack/poster-seeds/poster-seed-03-build-makers.svg" alt="Poster Seed 03 Build Makers">
-          <h2>03 — Build Makers</h2>
-          <p>Do not build monuments. Build makers.</p>
-          <div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-03-build-makers.svg">Open SVG</a></div>
-        </article>
-        <article class="pack-card" id="seed-04">
-          <img src="assets/print-pack/poster-seeds/poster-seed-04-scan-less-notice-more.svg" alt="Poster Seed 04 Scan Less Notice More">
-          <h2>04 — Scan Less / Notice More</h2>
-          <p>Use the code to notice the place, then put the phone away.</p>
-          <div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-04-scan-less-notice-more.svg">Open SVG</a></div>
-        </article>
+        <article class="pack-card" id="seed-01"><img src="assets/print-pack/poster-seeds/poster-seed-01-make-the-wall-teach.svg" alt="Poster Seed 01 Make The Wall Teach"><h2>01 — Make The Wall Teach</h2><p>A mural is a moment. A living mural is a relationship.</p><div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-01-make-the-wall-teach.svg">Open SVG</a></div></article>
+        <article class="pack-card" id="seed-02"><img src="assets/print-pack/poster-seeds/poster-seed-02-community-learns-to-create.svg" alt="Poster Seed 02 Community Learns To Create"><h2>02 — Community Learns To Create</h2><p>The greatest public artwork is not a mural. It is a community that learns to create.</p><div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-02-community-learns-to-create.svg">Open SVG</a></div></article>
+        <article class="pack-card" id="seed-03"><img src="assets/print-pack/poster-seeds/poster-seed-03-build-makers.svg" alt="Poster Seed 03 Build Makers"><h2>03 — Build Makers</h2><p>Do not build monuments. Build makers.</p><div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-03-build-makers.svg">Open SVG</a></div></article>
+        <article class="pack-card" id="seed-04"><img src="assets/print-pack/poster-seeds/poster-seed-04-scan-less-notice-more.svg" alt="Poster Seed 04 Scan Less Notice More"><h2>04 — Scan Less / Notice More</h2><p>Use the code to notice the place, then put the phone away.</p><div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-04-scan-less-notice-more.svg">Open SVG</a></div></article>
+        <article class="pack-card" id="seed-05"><img src="assets/print-pack/poster-seeds/poster-seed-05-asked-first.svg" alt="Poster Seed 05 Asked First"><h2>05 — Asked First</h2><p>Respect does not scale by being loud. It scales by being asked first.</p><div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-05-asked-first.svg">Open SVG</a></div></article>
+        <article class="pack-card" id="seed-06"><img src="assets/print-pack/poster-seeds/poster-seed-06-a-city-can-be-a-classroom.svg" alt="Poster Seed 06 A City Can Be A Classroom"><h2>06 — A City Can Be A Classroom</h2><p>Every footpath can hold a question. Every wall can start a lesson.</p><div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-06-a-city-can-be-a-classroom.svg">Open SVG</a></div></article>
+        <article class="pack-card pending" id="seed-07"><div class="poster-placeholder"><span><strong>07 — Pending</strong>Every Child Adds A Mark<br>Generate next, then replace this placeholder.</span></div><h2>07 — Every Child Adds A Mark</h2><p>Every child should leave school having made something the city can see.</p></article>
+        <article class="pack-card" id="seed-08"><img src="assets/print-pack/poster-seeds/poster-seed-08-exchange-means-reply.svg" alt="Poster Seed 08 Exchange Means Reply"><h2>08 — Exchange Means Reply</h2><p>A sister-city project is not decoration. It is a message that receives an answer.</p><div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-08-exchange-means-reply.svg">Open SVG</a></div></article>
+        <article class="pack-card" id="seed-09"><img src="assets/print-pack/poster-seeds/poster-seed-09-useful-is-beautiful.svg" alt="Poster Seed 09 Useful Is Beautiful"><h2>09 — Useful Is Beautiful</h2><p>Art must do a job for the people who live with it.</p><div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-09-useful-is-beautiful.svg">Open SVG</a></div></article>
+        <article class="pack-card" id="seed-10"><img src="assets/print-pack/poster-seeds/poster-seed-10-the-ecosystem-is-the-artwork.svg" alt="Poster Seed 10 The Ecosystem Is The Artwork"><h2>10 — The Ecosystem Is The Artwork</h2><p>Wall, walk, school, library, song, poster, maker. One living system.</p><div class="pack-actions"><a href="assets/print-pack/poster-seeds/poster-seed-10-the-ecosystem-is-the-artwork.svg">Open SVG</a></div></article>
       </div>
     </section>
 
@@ -100,9 +88,7 @@
         <article><h3>04 — Black Omen</h3><p>Japanese-English lyric study poster with key words and pronunciation prompts.</p></article>
         <article><h3>05 — Row the Black</h3><p>Bilingual chorus poster for the row/flame/storm chant.</p></article>
       </div>
-      <div class="note-box">
-        <strong>Status:</strong> full-size generated PNG sheets were backed up in the working archive for this run; this repo page records the index and public print-pack structure. Add final approved full-resolution images only when rights, review, and release status are clear.
-      </div>
+      <div class="note-box"><strong>Status:</strong> full-size generated PNG sheets were backed up in the working archive for this run; this repo page records the index and public print-pack structure. Add final approved full-resolution images only when rights, review, and release status are clear.</div>
     </section>
   </main>
 
