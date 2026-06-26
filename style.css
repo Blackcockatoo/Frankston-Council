@@ -215,6 +215,17 @@ th { color: var(--deep); font-weight: 950; background: rgba(244,189,104,.24); }
 .pending-panel { background: rgba(244,189,104,.14); border: 1px solid rgba(244,189,104,.35); border-radius: 1rem; padding: 1.35rem; }
 .pending-pill { display: inline-flex; background: rgba(233,130,107,.2); color: #7a2612; border-radius: 999px; padding: .35rem .75rem; font-size: .82rem; font-weight: 900; margin-top: .5rem; }
 
+/* ── Wall Art Pack ── */
+.wall-art-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.wall-art-card { background: var(--white); border: 1px solid var(--line); border-radius: 1.35rem; overflow: hidden; }
+.wall-art-preview { background: linear-gradient(145deg, #07151d 0%, #0d2d3d 55%, #162e3d 100%); min-height: 300px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.wall-art-preview::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(156deg, rgba(244,189,104,.055) 0 1px, transparent 1px 22px); pointer-events: none; }
+.wall-art-num { position: absolute; bottom: 1rem; right: 1.2rem; font-size: 5rem; font-weight: 950; color: rgba(244,189,104,.18); line-height: 1; z-index: 1; letter-spacing: -.05em; }
+.wall-art-preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; z-index: 2; }
+.wall-art-body { padding: 1.35rem; }
+.wall-art-body h3 { margin: 0 0 .4rem; }
+.wall-art-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+
 /* ── Asset gallery (image-library.html) ── */
 .image-slot img { width: 100%; height: 200px; object-fit: cover; display: block; }
 .asset-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
@@ -229,7 +240,7 @@ th { color: var(--deep); font-weight: 950; background: rgba(244,189,104,.24); }
   .site-header, .two-column, .split-heading, .protocol-grid, .rule-split, .pilot-card { grid-template-columns: 1fr; }
   .site-header { align-items: flex-start; flex-direction: column; }
   .signal-strip, .feature-grid, .loop-grid, .pilot-preview, .quote-row, .charter-grid, .charter-index, .poster-gallery, .visual-lead-grid, .artwork-grid, .poster-image-row { grid-template-columns: 1fr; }
-  .card-grid, .download-grid, .pilot-grid, .media-grid, .contact-route-grid, .gallery-grid, .asset-gallery { grid-template-columns: 1fr; }
+  .card-grid, .download-grid, .pilot-grid, .media-grid, .contact-route-grid, .gallery-grid, .asset-gallery, .wall-art-grid { grid-template-columns: 1fr; }
   .rules-list { columns: 1; }
   h1 { font-size: clamp(3rem, 16vw, 6rem); }
 }
@@ -242,4 +253,11 @@ th { color: var(--deep); font-weight: 950; background: rgba(244,189,104,.24); }
   .poster-card { break-after: page; page-break-after: always; min-height: calc(100vh - 24mm); box-shadow: none; border: 2px solid #111; }
   .content-band, .rules-block, .page-hero { padding: 1rem 0; background: white !important; color: black !important; }
   a { text-decoration: none; }
+  /* Wall Art Pack — one artwork per page */
+  body.wall-art-page .wall-art-grid { display: block; }
+  body.wall-art-page .wall-art-card { break-after: page; page-break-after: always; border: none; border-radius: 0; box-shadow: none; background: white; }
+  body.wall-art-page .wall-art-preview { min-height: calc(100vh - 24mm); background: #07151d !important; }
+  body.wall-art-page .wall-art-preview img { position: static; width: 100%; height: auto; max-height: calc(100vh - 24mm); object-fit: contain; }
+  body.wall-art-page .wall-art-body, body.wall-art-page .wall-art-actions { display: none; }
+  body.wall-art-page .wall-art-num { display: none; }
 }

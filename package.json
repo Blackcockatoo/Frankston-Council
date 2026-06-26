@@ -4,6 +4,6 @@
   "private": true,
   "description": "Static site for Frankston 2035 — Art That Lives.",
   "scripts": {
-    "check": "node -e \"const fs=require('fs');['index.html','style.css','assets/images/frankston-hero.png','vision.html','public-art-pilots.html','schools.html'].forEach(f=>{if(!fs.existsSync(f))throw new Error('MISSING: '+f);else console.log('OK:',f);})\""
+    "check": "node -e \"const fs=require('fs');['index.html','style.css','assets/images/frankston-hero.png','vision.html','public-art-pilots.html','schools.html','wall-art.html','assets/wall-art/README.md'].forEach(f=>{if(!fs.existsSync(f))throw new Error('MISSING: '+f);else console.log('OK:',f);})\""
   }
 }
