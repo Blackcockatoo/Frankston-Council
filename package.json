@@ -4,6 +4,6 @@
   "private": true,
   "description": "Static deploy for Frankston 2035 — Art That Lives.",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp index.html posters.html pilots.html healthy-technology.html style.css favicon.svg 404.html dist/ && cp -R assets dist/assets"
+    "build": "rm -rf dist && mkdir -p dist && cp index.html posters.html print-pack.html pilots.html healthy-technology.html style.css favicon.svg 404.html dist/ && cp -R assets dist/assets && cp -R downloads dist/downloads"
   }
 }
