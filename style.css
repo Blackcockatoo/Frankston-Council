@@ -124,11 +124,102 @@ th { color: var(--deep); font-weight: 950; background: rgba(244,189,104,.24); }
 .action-list a { justify-content: flex-start; background: rgba(255,255,255,.66); border-color: rgba(7,21,29,.14); }
 .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding: 2rem clamp(1rem, 4vw, 3rem); background: var(--deep); color: rgba(255,255,255,.72); }
 .site-footer p { margin: 0; font-weight: 800; }
+.footer-disclaimer { font-size: .82rem; font-weight: 700; opacity: .75; }
+
+/* ── Disclaimer bar ── */
+.disclaimer-bar { background: #0d1e26; color: rgba(255,255,255,.84); text-align: center; padding: .6rem 1.5rem; font-size: .82rem; font-weight: 700; border-bottom: 2px solid var(--gold); }
+.disclaimer-bar strong { color: var(--gold); }
+
+/* ── Layout primitives for integrated subpages ── */
+.inner { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; position: relative; z-index: 1; }
+.section { padding: clamp(3.5rem, 7vw, 7.5rem) 0; }
+.section.white { background: var(--white); }
+.section.mist { background: #eaf3f1; }
+.section.dark-band { background: linear-gradient(135deg, #0b3344, #07151d); color: var(--white); }
+.section.sunset-band { background: linear-gradient(135deg, #f4bd68, #ffe4aa); }
+.section.compact { padding: clamp(2rem, 4vw, 4rem) 0; }
+.page-hero .inner { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
+.page-hero h1 { font-size: clamp(2.4rem, 6vw, 5rem); }
+
+/* ── Stack / typography utilities ── */
+.stack { display: flex; flex-direction: column; gap: .9rem; }
+.lead { font-size: 1.1rem; line-height: 1.6; font-weight: 600; color: var(--muted); }
+.dark-band .lead, .dark-band p { color: rgba(255,255,255,.82); }
+
+/* ── Card grid ── */
+.card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.8rem; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: 1.35rem; padding: 1.35rem; }
+.mist .card { background: rgba(255,255,255,.72); }
+
+/* ── Steps list ── */
+.steps { list-style: none; counter-reset: step; padding: 0; margin: 1.2rem 0 0; display: flex; flex-direction: column; gap: .75rem; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 2rem 1fr; gap: .85rem; align-items: start; }
+.steps li::before { content: counter(step); display: flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 999px; background: var(--gold); color: var(--deep); font-weight: 900; font-size: .88rem; flex-shrink: 0; }
+.steps li span { padding-top: .25rem; }
+.dark-band .steps li::before { background: var(--sky); }
+.dark-band .steps li span { color: rgba(255,255,255,.82); }
+
+/* ── Notice / callout ── */
+.notice { background: rgba(244,189,104,.15); border: 1px solid rgba(244,189,104,.38); border-radius: 1rem; padding: 1.35rem; }
+.callout { background: var(--deep); color: var(--white); border-radius: 1.35rem; padding: 1.5rem 1.8rem; }
+.callout h2 { font-size: clamp(1.3rem, 2.4vw, 1.9rem); }
+.callout p { color: rgba(255,255,255,.82); }
+
+/* ── Action row ── */
+.action-row { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+/* ── Download grid ── */
+.download-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.download-card { background: var(--white); border: 1px solid var(--line); border-radius: 1.35rem; padding: 1.35rem; display: flex; flex-direction: column; }
+.download-card footer { margin-top: auto; padding-top: 1rem; }
+.download-status { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .75rem; }
+.download-button { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: .75rem 1.2rem; font-weight: 900; text-decoration: none; border: 1px solid var(--line); }
+.download-button.dark { background: var(--deep); color: var(--white); border-color: transparent; }
+
+/* ── Status chips ── */
+.status-chip { display: inline-flex; border-radius: 999px; padding: .3rem .75rem; font-size: .76rem; font-weight: 900; letter-spacing: .04em; }
+.status-chip.green { background: rgba(43,125,140,.14); color: #185e6d; }
+.status-chip.gold { background: rgba(244,189,104,.28); color: #7a5c0a; }
+.status-chip.red { background: rgba(233,130,107,.2); color: #7a2612; }
+
+/* ── Pilot grid (vertical card format) ── */
+.pilot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.pilot-grid .pilot-card { display: flex; flex-direction: column; }
+.pilot-meta { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .75rem; }
+.pilot-card.recommended { border: 2px solid var(--sea); background: rgba(43,125,140,.06); }
+
+/* ── Footer nav list ── */
+.link-list { list-style: none; padding: 0; margin: 0; display: flex; gap: .75rem; flex-wrap: wrap; }
+.link-list a { color: rgba(255,255,255,.72); text-decoration: none; }
+.link-list a:hover { color: var(--white); }
+
+/* ── Button variants ── */
+.button.light { background: rgba(255,255,255,.78); color: var(--deep); border-color: var(--line); }
+
+/* ── Contact page ── */
+.media-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2rem; }
+.press-card, .contact-card { background: var(--white); border: 1px solid var(--line); border-radius: 1.35rem; padding: 1.5rem; }
+.contact-route-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.contact-route { background: var(--white); border: 1px solid var(--line); border-radius: 1.35rem; padding: 1.35rem; display: flex; flex-direction: column; gap: .5rem; }
+
+/* ── Image library ── */
+.gallery-tools { display: flex; flex-wrap: wrap; gap: .5rem; align-self: flex-start; }
+.category-chip { display: inline-flex; border-radius: 999px; padding: .35rem .8rem; background: rgba(43,125,140,.14); color: var(--sea); font-size: .82rem; font-weight: 850; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.gallery-card { background: var(--white); border: 1px solid var(--line); border-radius: 1.35rem; overflow: hidden; }
+.image-slot { min-height: 140px; display: flex; align-items: center; justify-content: center; background: var(--paper); border-bottom: 1px solid var(--line); color: var(--muted); font-size: .85rem; font-weight: 700; text-align: center; padding: 1rem; }
+.gallery-body { padding: 1.1rem; }
+.asset-details { padding-left: 1.2rem; color: var(--muted); font-size: .88rem; }
+
+/* ── Print pack extras ── */
+.pending-panel { background: rgba(244,189,104,.14); border: 1px solid rgba(244,189,104,.35); border-radius: 1rem; padding: 1.35rem; }
+.pending-pill { display: inline-flex; background: rgba(233,130,107,.2); color: #7a2612; border-radius: 999px; padding: .35rem .75rem; font-size: .82rem; font-weight: 900; margin-top: .5rem; }
 
 @media (max-width: 900px) {
   .site-header, .two-column, .split-heading, .protocol-grid, .rule-split, .pilot-card { grid-template-columns: 1fr; }
   .site-header { align-items: flex-start; flex-direction: column; }
   .signal-strip, .feature-grid, .loop-grid, .pilot-preview, .quote-row, .charter-grid, .charter-index, .poster-gallery, .visual-lead-grid, .artwork-grid, .poster-image-row { grid-template-columns: 1fr; }
+  .card-grid, .download-grid, .pilot-grid, .media-grid, .contact-route-grid, .gallery-grid { grid-template-columns: 1fr; }
   .rules-list { columns: 1; }
   h1 { font-size: clamp(3rem, 16vw, 6rem); }
 }
