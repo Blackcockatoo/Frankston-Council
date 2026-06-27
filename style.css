@@ -162,11 +162,42 @@ th { color: var(--deep); font-weight: 950; background: rgba(244,189,104,.24); }
 .action-list a { justify-content: flex-start; background: rgba(255,255,255,.66); border-color: rgba(7,21,29,.14); }
 .site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding: 2rem clamp(1rem, 4vw, 3rem); background: var(--deep); color: rgba(255,255,255,.72); }
 .site-footer p { margin: 0; font-weight: 800; }
+.site-footer > div { display: flex; flex-direction: column; gap: .35rem; }
+.footer-notice { font-size: .82rem; font-weight: 650; color: rgba(255,255,255,.48); width: 100%; border-top: 1px solid rgba(255,255,255,.1); padding-top: .85rem; margin-top: .15rem !important; }
+
+/* Global disclaimer bar */
+.site-notice { background: rgba(244,189,104,.18); border-bottom: 1px solid rgba(244,189,104,.36); text-align: center; font-size: .82rem; font-weight: 750; padding: .55rem clamp(1rem, 4vw, 3rem); color: #5c4217; }
+
+/* Start Here — steps */
+.next-steps-band { background: linear-gradient(135deg, var(--gold), #ffe4aa); padding: clamp(3.5rem, 7vw, 7.5rem) 0; }
+.steps-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: .85rem; }
+.steps-list li { display: flex; align-items: flex-start; gap: 1.1rem; background: rgba(255,255,255,.68); border-radius: 1.2rem; padding: 1.2rem 1.4rem; border: 1px solid rgba(0,0,0,.1); }
+.step-num { display: inline-flex; align-items: center; justify-content: center; min-width: 2.2rem; height: 2.2rem; border-radius: 999px; background: var(--deep); color: var(--gold); font-weight: 950; font-size: .92rem; flex-shrink: 0; margin-top: .1rem; }
+
+/* Image library */
+.lib-section { padding: clamp(2.5rem, 5vw, 5rem) 0; }
+.lib-section + .lib-section { border-top: 2px solid var(--line); }
+.cat-badge { display: inline-flex; align-items: center; gap: .4rem; border-radius: 999px; padding: .45rem 1rem; font-size: .76rem; font-weight: 950; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 1rem; }
+.cat-badge.ready { background: #1a6640; color: #fff; }
+.cat-badge.moodboard { background: var(--sea); color: #fff; }
+.cat-badge.review { background: #8a3800; color: #fff; }
+.lib-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.2rem; }
+.lib-card { background: var(--white); border: 1px solid var(--line); border-radius: 1rem; overflow: hidden; box-shadow: var(--shadow); }
+.lib-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.lib-card-body { padding: .9rem 1rem 1rem; }
+.lib-card-body h3 { margin: 0 0 .3rem; font-size: 1rem; }
+.lib-card-body p { margin: 0; font-size: .88rem; color: var(--muted); line-height: 1.45; }
+.lib-notice { background: rgba(233,130,107,.12); border: 1px solid rgba(233,130,107,.38); border-radius: .8rem; padding: .9rem 1.1rem; margin-bottom: 1.2rem; color: var(--ink); font-size: .92rem; }
+
+/* Cultural protocol */
+.protocol-page .page-hero { background: radial-gradient(circle at 20% 80%, rgba(154,217,222,.3), transparent 26rem), linear-gradient(135deg, #07151d, #1a3d2b); }
+.respect-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; }
+.respect-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.14); border-radius: 1.35rem; padding: 1.4rem; }
 
 @media (max-width: 900px) {
   .site-header, .two-column, .split-heading, .protocol-grid, .rule-split, .pilot-card { grid-template-columns: 1fr; }
   .site-header { align-items: flex-start; flex-direction: column; }
-  .signal-strip, .feature-grid, .loop-grid, .pilot-preview, .quote-row, .charter-grid, .charter-index, .poster-gallery, .visual-lead-grid, .artwork-grid, .poster-image-row, .poster-source-card, .identity-pack-grid { grid-template-columns: 1fr; }
+  .signal-strip, .feature-grid, .loop-grid, .pilot-preview, .quote-row, .charter-grid, .charter-index, .poster-gallery, .visual-lead-grid, .artwork-grid, .poster-image-row, .poster-source-card, .identity-pack-grid, .respect-grid { grid-template-columns: 1fr; }
   .rules-list { columns: 1; }
   h1 { font-size: clamp(3rem, 16vw, 6rem); }
 }
