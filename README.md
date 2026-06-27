@@ -2,16 +2,16 @@
 
 Static Vercel deploy for **Frankston 2035 - Art That Lives**.
 
-This repo now contains the public-facing seed kit rather than a placeholder landing page.
-
 ## Pages
 
-- `index.html` - landing page and main civic explanation
-- `posters.html` - ten printable A4 poster seeds
-- `pilots.html` - five low-cost pilot concepts
-- `healthy-technology.html` - Healthy Technology Charter and pilot safety checklist
-- `style.css` - shared design system, responsive layout, and print styles
-- `assets/frankston-hero.svg` - lightweight civic hero artwork
+- `index.html` — landing page and main civic explanation
+- `posters.html` — ten printable A4 poster seeds
+- `print-pack.html` — print-ready SVG poster seed pack (seeds 01-06, 08-10; seed 07 pending artwork)
+- `pilots.html` — five low-cost pilot concepts
+- `healthy-technology.html` — Healthy Technology Charter and pilot safety checklist
+- `404.html` — page-not-found with nav and CTAs
+- `style.css` — shared design system, responsive layout, and print styles
+- `favicon.svg` — site mark (gold/sky gradient on deep navy)
 
 ## Vercel settings
 
