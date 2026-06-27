@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2480" height="3508" viewBox="0 0 2480 3508" role="img" aria-label="Poster Seed 07 Every Child Adds A Mark">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8f0dc"/>
+      <stop offset="0.48" stop-color="#dcefed"/>
+      <stop offset="1" stop-color="#102f38"/>
+    </linearGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.09"/></feComponentTransfer>
+    </filter>
+    <style>.serif{font-family:Georgia,'Times New Roman',serif}.sans{font-family:Arial,Helvetica,sans-serif}.bold{font-weight:800}.wide{letter-spacing:8px}</style>
+  </defs>
+  <rect width="2480" height="3508" fill="url(#bg)"/>
+  <rect width="2480" height="3508" filter="url(#grain)" opacity=".48"/>
+  <rect x="92" y="92" width="2296" height="3324" fill="none" stroke="#c99a4a" stroke-width="10" opacity=".85"/>
+  <rect x="142" y="142" width="2196" height="3224" fill="none" stroke="#8f6a2f" stroke-width="4" opacity=".64"/>
+  <text x="260" y="300" class="serif bold wide" fill="#12313b" font-size="56">POSTER SEED 07</text>
+  <text x="2220" y="300" text-anchor="end" class="sans wide" fill="#315f66" font-size="38">FRANKSTON 2035 - ART THAT LIVES</text>
+  <line x1="260" y1="380" x2="2220" y2="380" stroke="#c99a4a" stroke-width="5" opacity=".72"/>
+  <circle cx="1240" cy="455" r="84" fill="none" stroke="#c99a4a" stroke-width="5"/>
+  <text x="1240" y="474" text-anchor="middle" class="serif bold" fill="#12313b" font-size="52">B$S</text>
+
+  <g transform="translate(260 620)">
+    <rect x="0" y="0" width="1960" height="595" rx="70" fill="#fff9ee" opacity=".9" stroke="#12313b" stroke-width="6"/>
+    <path d="M90 410 C260 275 395 500 555 350 S860 250 1025 385 S1350 520 1515 330 S1770 215 1870 360" fill="none" stroke="#087f9b" stroke-width="16" stroke-linecap="round" opacity=".82"/>
+    <path d="M120 470 C420 390 655 505 910 428 S1360 350 1840 455" fill="none" stroke="#12a56a" stroke-width="14" stroke-linecap="round" opacity=".72"/>
+    <circle cx="250" cy="178" r="64" fill="#f6c650"/>
+    <circle cx="520" cy="250" r="42" fill="#f27764"/>
+    <circle cx="812" cy="178" r="52" fill="#58b8c9"/>
+    <circle cx="1160" cy="268" r="42" fill="#12a56a"/>
+    <circle cx="1525" cy="178" r="58" fill="#f6c650"/>
+    <circle cx="1748" cy="300" r="38" fill="#087f9b"/>
+    <g stroke="#12313b" stroke-width="10" stroke-linecap="round" opacity=".82">
+      <path d="M250 244v112M520 292v105M812 230v132M1160 310v96M1525 236v120M1748 338v78"/>
+    </g>
+    <text x="980" y="548" text-anchor="middle" class="sans bold wide" fill="#315f66" font-size="40">A PUBLIC WALL CAN HOLD A CLASSROOM'S HANDWRITING.</text>
+  </g>
+
+  <text x="1240" y="1510" text-anchor="middle" class="serif bold" fill="#12313b" font-size="245">EVERY CHILD</text>
+  <text x="1240" y="1785" text-anchor="middle" class="serif bold" fill="#087f9b" font-size="305">ADDS A MARK</text>
+  <line x1="380" y1="1912" x2="2100" y2="1912" stroke="#c99a4a" stroke-width="8"/>
+  <text x="1240" y="2008" text-anchor="middle" class="sans wide" fill="#315f66" font-size="42">PUBLIC ART SHOULD LEAVE A DOOR OPEN FOR THE NEXT MAKER.</text>
+
+  <rect x="260" y="2160" width="1960" height="430" rx="70" fill="#102f38" stroke="#c99a4a" stroke-width="6"/>
+  <text x="1240" y="2316" text-anchor="middle" class="serif" fill="#fff9ee" font-size="88">Every child should leave school</text>
+  <text x="1240" y="2460" text-anchor="middle" class="serif bold" fill="#f6c650" font-size="104">having made something the city can see.</text>
+
+  <g fill="none" stroke="#12313b" stroke-width="6">
+    <rect x="260" y="2690" width="455" height="335" rx="55"/>
+    <rect x="765" y="2690" width="455" height="335" rx="55"/>
+    <rect x="1270" y="2690" width="455" height="335" rx="55"/>
+    <rect x="1775" y="2690" width="455" height="335" rx="55"/>
+  </g>
+  <g class="serif bold" fill="#12313b" font-size="68" text-anchor="middle">
+    <text x="488" y="2790">DRAW</text>
+    <text x="992" y="2790">WRITE</text>
+    <text x="1498" y="2790">POST</text>
+    <text x="2002" y="2790">RETURN</text>
+  </g>
+  <g class="sans" fill="#315f66" font-size="36" text-anchor="middle">
+    <text x="488" y="2882">one response</text>
+    <text x="992" y="2882">one sentence</text>
+    <text x="1498" y="2882">with care</text>
+    <text x="2002" y="2882">to the city</text>
+  </g>
+
+  <rect x="260" y="3130" width="1960" height="195" rx="65" fill="#fff9ee" stroke="#12313b" stroke-width="6"/>
+  <text x="360" y="3208" class="sans bold wide" fill="#d96d4b" font-size="40">MICRO-ACTION</text>
+  <text x="360" y="3298" class="serif bold" fill="#12313b" font-size="64">Collect one class response and return it to the public wall</text>
+  <text x="360" y="3372" class="serif bold" fill="#087f9b" font-size="64">as a moderated poster.</text>
+  <line x1="260" y1="3415" x2="2220" y2="3415" stroke="#c99a4a" stroke-width="5"/>
+  <text x="260" y="3476" class="serif bold" fill="#12313b" font-size="44">Frankston 2035 - Art That Lives</text>
+  <text x="2220" y="3476" text-anchor="end" class="sans" fill="#315f66" font-size="36">Blue Snake Studio seed</text>
+</svg>

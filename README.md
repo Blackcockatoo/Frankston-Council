@@ -2,18 +2,28 @@
 
 Static Vercel deploy for **Frankston 2035 - Art That Lives**.
 
+This repo contains the public-facing civic seed kit: the main proposal site, A4 poster seeds, print pack, pilot concepts, Healthy Technology Charter, and downloadable identity assets.
+
 ## Pages
 
-- `index.html` — landing page and main civic explanation
-- `posters.html` — ten printable A4 poster seeds
-- `print-pack.html` — print-ready SVG poster seed pack (seeds 01-06, 08-10; seed 07 pending artwork)
-- `pilots.html` — five low-cost pilot concepts
-- `healthy-technology.html` — Healthy Technology Charter and pilot safety checklist
-- `404.html` — page-not-found with nav and CTAs
-- `style.css` — shared design system, responsive layout, and print styles
-- `favicon.svg` — site mark (gold/sky gradient on deep navy)
+- `index.html` - landing page and main civic explanation
+- `posters.html` - ten printable A4 poster seed source previews
+- `print-pack.html` - A4 poster SVG pack, print notes, bilingual sheet index, and logo/SVG pack explanation
+- `pilots.html` - five low-cost pilot concepts
+- `healthy-technology.html` - Healthy Technology Charter and pilot safety checklist
+- `404.html` - page-not-found redirect
+- `style.css` - shared design system, responsive layout, and print styles
+- `favicon.svg` - site mark
 
-## Vercel settings
+## Key Asset Folders
+
+- `assets/print-pack/poster-seeds/` - editable A4 SVG poster source files, seeds 01-10
+- `assets/images/` - campaign imagery and public site visual assets
+- `downloads/print-pack/README.txt` - print-pack backup manifest
+- `downloads/frankston-2035-logo-pack.zip` - downloadable Frankston 2035 identity/SVG pack
+- `10 - Graphics/frankston-2035-logo-pack/README.md` - detailed identity/SVG pack usage guide
+
+## Vercel Settings
 
 The repo includes `vercel.json` and `package.json`.
 
@@ -23,9 +33,9 @@ Vercel should use:
 - Output Directory: `dist`
 - Branch: `main`
 
-The build script copies all HTML pages, CSS, favicon, 404 page, README, and hero asset into `dist`.
+The build script copies all HTML pages, CSS, favicon, 404 page, README, downloads, and assets into `dist`.
 
-## Local run
+## Local Run
 
 Open `index.html` directly, or run:
 
@@ -35,7 +45,7 @@ python -m http.server 8080
 
 Then visit `http://localhost:8080`.
 
-## Content rules
+## Content Rules
 
 1. Frankston is the hero.
 2. Blue Snake Studio is the engine, maker, or stamp - not the headline.
@@ -48,7 +58,7 @@ Then visit `http://localhost:8080`.
 9. Every page points to practical next steps.
 10. The ecosystem is the artwork.
 
-## What not to do
+## What Not To Do
 
 - Do not claim First Nations partnership, language use, stories, symbols, or approvals unless they exist.
 - Do not claim a formal Susono program where there is only a proposed exchange.
