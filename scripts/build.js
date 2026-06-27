@@ -6,13 +6,20 @@ const dist = path.join(root, "dist");
 
 const files = [
   "index.html",
+  "start-here.html",
+  "vision.html",
+  "pilots.html",
   "posters.html",
   "print-pack.html",
-  "pilots.html",
+  "image-library.html",
+  "schools.html",
   "healthy-technology.html",
+  "cultural-protocol.html",
+  "sister-city.html",
+  "media-contact.html",
+  "404.html",
   "style.css",
   "favicon.svg",
-  "404.html",
   "README.md"
 ];
 

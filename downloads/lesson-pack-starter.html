@@ -4,24 +4,61 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lesson Pack Starter — Frankston 2035</title>
-  <meta name="description" content="A 30-minute classroom activity for Frankston 2035: notice, make, share safely. Print-friendly. No login required.">
+  <meta name="description" content="A 30-minute classroom activity for Frankston 2035: notice, make, share safely. Print-ready teacher guide and student worksheet. No login required.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .year-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .75rem; margin-top: 1.5rem; }
+    .year-card { border: 1px solid var(--line); border-radius: .9rem; padding: 1rem 1.1rem; background: var(--white); }
+    .year-card strong { display: block; color: var(--sea); font-size: .78rem; font-weight: 950; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .3rem; }
+    .year-card p { margin: 0; font-size: .9rem; color: var(--muted); }
+    /* Worksheet print section */
+    .worksheet { background: white; border: 2px solid var(--line); border-radius: 1.35rem; padding: 2.5rem; margin-top: 2.5rem; }
+    .worksheet-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; border-bottom: 2px solid var(--deep); padding-bottom: 1.2rem; margin-bottom: 1.5rem; }
+    .worksheet-header h3 { margin: 0; font-size: 1.4rem; color: var(--deep); }
+    .worksheet-meta { display: grid; gap: .35rem; }
+    .worksheet-field { display: flex; align-items: baseline; gap: .75rem; font-size: .9rem; }
+    .worksheet-field span { flex: 1; border-bottom: 1px solid var(--deep); min-width: 120px; }
+    .ws-section { margin-bottom: 1.8rem; }
+    .ws-section h4 { color: var(--sea); font-size: .78rem; font-weight: 950; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 .6rem; }
+    .ws-prompt { background: rgba(244,189,104,.12); border-left: 4px solid var(--gold); padding: .8rem 1rem; font-size: .97rem; color: var(--deep); font-weight: 750; margin-bottom: .8rem; border-radius: 0 .5rem .5rem 0; }
+    .ws-lines { display: grid; gap: .6rem; margin-top: .5rem; }
+    .ws-lines div { border-bottom: 1px solid rgba(16,38,45,.28); min-height: 1.8rem; }
+    .ws-box { border: 1px solid rgba(16,38,45,.28); border-radius: .35rem; min-height: 5rem; margin-top: .5rem; }
+    .cut-here { text-align: center; margin: 2.5rem 0; color: var(--muted); font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; border-top: 2px dashed var(--line); padding-top: .65rem; }
+    @media print {
+      .no-print, .site-header, .site-notice { display: none !important; }
+      .page-hero, .content-band, .rules-block { background: white !important; color: black !important; padding: .5rem 0 !important; }
+      .page-hero .prose p, .prose p, .bay .prose p { color: black !important; }
+      .section-inner { width: 100% !important; }
+      .year-grid { grid-template-columns: repeat(4, 1fr); }
+      .worksheet { border: 2px solid #111; border-radius: 0; page-break-inside: avoid; }
+      .site-footer { display: none !important; }
+      .worksheet-section-only { display: block !important; }
+    }
+    @media (max-width: 900px) {
+      .year-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="site-notice" role="note">Independent civic proposal by Blue Snake Studio. Not an official Frankston City Council website.</div>
+
   <header class="site-header no-print" aria-label="Primary">
-    <a class="brand-mark" href="../index.html" aria-label="Frankston 2035 home"><span class="brand-dot" aria-hidden="true"></span><span>Frankston 2035</span></a>
+    <a class="brand-mark" href="/" aria-label="Frankston 2035 home"><span class="brand-dot" aria-hidden="true"></span><span>Frankston 2035</span></a>
     <nav class="site-nav" aria-label="Site">
-      <a href="../index.html">Home</a>
-      <a href="../vision.html">Vision</a>
-      <a href="../pilots.html">Pilots</a>
-      <a href="../posters.html">Poster Seeds</a>
-      <a href="../print-pack.html">Print Pack</a>
-      <a href="../schools.html">Schools</a>
-      <a href="../healthy-technology.html">Healthy Tech</a>
-      <a href="../sister-city.html">Sister City</a>
-      <a href="../media-contact.html">Contact</a>
+      <a href="/start-here">Start Here</a>
+      <a href="/pilots">Pilots</a>
+      <a href="/posters">Poster Seeds</a>
+      <a href="/print-pack">Print Pack</a>
+      <a href="/schools">Schools</a>
+      <a href="/image-library">Image Library</a>
+      <a href="/healthy-technology">Healthy Tech</a>
+      <a href="/cultural-protocol">Cultural Protocol</a>
+      <a href="/sister-city">Sister City</a>
+      <a href="/media-contact">Contact</a>
     </nav>
   </header>
 
@@ -33,11 +70,11 @@
           <h1>Notice. Make. Share safely.</h1>
         </div>
         <div class="prose">
-          <p>A 30-minute classroom activity that works for any year level with local adjustment. No login. No student accounts. No personal data collected.</p>
+          <p>A 30-minute classroom session linked to Frankston public art or local place. Works for any year level with local adjustment. No login. No student accounts. No personal data collected.</p>
           <div class="hero-actions no-print">
-            <button class="button primary" type="button" onclick="window.print()">Print this pack</button>
+            <button class="button primary" type="button" onclick="window.print()">Print teacher pack + worksheet</button>
           </div>
-          <p class="maker-stamp dark-stamp">Independent proposal by Blue Snake Studio. Not an official school curriculum or Education Department resource.</p>
+          <p class="maker-stamp dark-stamp">Independent proposal by Blue Snake Studio. Not an official school curriculum or Education Department resource. Always follow your school's own processes.</p>
         </div>
       </div>
     </section>
@@ -45,74 +82,136 @@
     <section class="content-band paper" id="how-it-works">
       <div class="section-inner two-column">
         <div>
-          <p class="eyebrow">How it works</p>
-          <h2>Three steps. One local prompt. One made thing.</h2>
+          <p class="eyebrow">For teachers</p>
+          <h2>Three steps. 30 minutes. One local prompt.</h2>
         </div>
         <div class="prose">
-          <p>Each session has three phases. The digital layer (if used) supports only the notice step — the rest happens on paper or in person.</p>
+          <p>Each session has three phases. Timing is a guide — adjust for your class.</p>
           <ol>
-            <li><strong>Notice (10 minutes).</strong> Use a local prompt — a mural, a foreshore view, a building detail, a station route — to focus student attention. Ask: what do you see? What do you feel? What does this place remind you of?</li>
-            <li><strong>Make (15 minutes).</strong> Students create something in response: a sentence, a drawing, a pattern, a map, a word list, a short poem. No screen needed for this step.</li>
-            <li><strong>Share safely (5 minutes).</strong> Students share within the classroom only. No public posting, no student accounts, no personal data shared. Teacher decides whether the work goes further — see the Student Artwork Pathway and Permission Checklist.</li>
+            <li><strong>Notice — 10 minutes.</strong> Use one local prompt (below) to focus attention. Students observe, look, or remember a place, object, or person connected to Frankston. The digital layer, if used, supports this step only — a QR code pointing to a photo or map prompt. Then devices go away.</li>
+            <li><strong>Make — 15 minutes.</strong> Students create something in response to the prompt: a sentence, a drawing, a map, a word list, a short poem, a diagram. No screen needed. No typing. Paper and pencil only at this stage.</li>
+            <li><strong>Share safely — 5 minutes.</strong> Students share within the room. Pair-share or small group. Teacher decides what, if anything, goes further — see the Student Artwork Pathway and Permission Checklist before sharing publicly.</li>
           </ol>
         </div>
       </div>
     </section>
 
-    <section class="content-band white" id="local-prompts">
+    <section class="content-band white" id="year-levels">
       <div class="section-inner">
-        <p class="eyebrow">Local prompts</p>
-        <h2>Pick one. Adjust for your year level and class.</h2>
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="card-kicker">Foreshore</span>
-            <h3>The bay at this time of year</h3>
-            <p>What is the bay doing right now? What does it look like from where you stand? Draw it from memory or describe it in three lines.</p>
-          </article>
-          <article class="feature-card">
-            <span class="card-kicker">Mural</span>
-            <h3>A wall that asks a question</h3>
-            <p>Find a public mural near the school. What is it saying? What would you add? What question would you put on a wall?</p>
-          </article>
-          <article class="feature-card">
-            <span class="card-kicker">Place</span>
-            <h3>My route to school</h3>
-            <p>Draw or describe the route from home to school. What do you pass? What do you notice? What do you usually miss?</p>
-          </article>
-          <article class="feature-card">
-            <span class="card-kicker">Community</span>
-            <h3>A person who makes Frankston better</h3>
-            <p>Name someone — a person you know, a business, a volunteer — who makes the local area better. Write three sentences about what they do and why it matters.</p>
-          </article>
+        <p class="eyebrow">Adapting for year level</p>
+        <h2>Pick the prompt format that fits your class.</h2>
+        <div class="year-grid">
+          <div class="year-card"><strong>Foundation–Year 2</strong><p>One question. One drawing. "Draw what you can see from here." "Draw your way to school."</p></div>
+          <div class="year-card"><strong>Year 3–4</strong><p>Two or three sentence responses. "Describe this place in three lines." "What would you change about this wall?"</p></div>
+          <div class="year-card"><strong>Year 5–6</strong><p>Short paragraph or poem. "Write from the point of view of the mural." "What story does this place need to tell?"</p></div>
+          <div class="year-card"><strong>Year 7–10</strong><p>Analysis or creative response. "What does public art say about who a community values?" "Design a mural for this site."</p></div>
         </div>
       </div>
     </section>
 
-    <section class="content-band bay" id="teacher-notes">
+    <section class="content-band bay" id="local-prompts">
+      <div class="section-inner two-column">
+        <div>
+          <p class="eyebrow">Choose one prompt</p>
+          <h2>Use one. Adapt for your students and local site.</h2>
+        </div>
+        <div class="prose">
+          <p>Pick the prompt that fits your available time, location, and subject. You can use this without visiting a mural — the prompt can work from memory, description, or a class discussion about local place.</p>
+          <ul>
+            <li><strong>The bay at this time of year.</strong> What is the foreshore doing right now? Describe it or draw it from memory. What sounds, smells, colours, feelings?</li>
+            <li><strong>A wall that asks a question.</strong> Find a public mural near the school (or show a photo). What is it saying? What would you add? What question would you put on a wall where strangers could read it?</li>
+            <li><strong>My route to school.</strong> Draw or describe the journey from home to school. What do you pass? What do you usually miss? What would a stranger notice that you've stopped seeing?</li>
+            <li><strong>A person who makes Frankston better.</strong> Name someone — a person you know, a local business, a volunteer — who makes the local area better. Write three sentences about what they do and why it matters.</li>
+            <li><strong>If this wall could talk.</strong> Choose any wall or public surface you know in Frankston. What would it say if it could speak? Write its voice.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-band paper" id="teacher-notes">
       <div class="section-inner two-column">
         <div>
           <p class="eyebrow">Teacher notes</p>
-          <h2>Use this as a starting point, not a script.</h2>
+          <h2>Before, during, and after the session.</h2>
         </div>
         <div class="prose">
-          <p>This pack is designed to be adapted. A Year 2 class will use shorter prompts and simpler responses than a Year 10 class. The activity works equally well in English, Visual Art, Humanities, or as a homeroom starter.</p>
           <p><strong>Before the session:</strong></p>
           <ul>
-            <li>Choose one local prompt from the list above, or write your own.</li>
-            <li>Print this sheet or display it on a projector — no student devices needed.</li>
-            <li>Decide in advance whether any student work will go outside the classroom (if yes, complete the Permission Checklist first).</li>
+            <li>Choose one prompt from the list above, or write your own local version.</li>
+            <li>Print one student worksheet per student (below), or display the prompt on the board.</li>
+            <li>If you will use any photos or maps, cue them up in advance — screen time is for the notice step only.</li>
+            <li>Decide in advance whether any work will leave the classroom. If yes, complete the Permission Checklist before the session, not after.</li>
           </ul>
           <p><strong>During the session:</strong></p>
           <ul>
             <li>Keep the notice step to 10 minutes. A tight time limit helps students focus.</li>
-            <li>Let students choose their response format — sentence, drawing, map, pattern, list.</li>
-            <li>Share in pairs or small groups before the whole class.</li>
+            <li>Resist the urge to extend the make step beyond 15 minutes — short constraints often produce better responses.</li>
+            <li>For the share step: pairs, then selected volunteers, then whole class. Keep it light.</li>
           </ul>
           <p><strong>After the session:</strong></p>
           <ul>
-            <li>Collect student work or display it in the classroom.</li>
-            <li>If you want to display publicly, follow the Student Artwork Pathway.</li>
+            <li>Collect student work or let students keep their worksheets.</li>
+            <li>If displaying publicly: follow the Student Artwork Pathway — every step, in order.</li>
+            <li>Send feedback to Blue Snake Studio if you run this pilot. Subject: "Frankston 2035 — school pilot". Your feedback shapes Stage Two.</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-band white" id="worksheet">
+      <div class="section-inner">
+        <p class="eyebrow">Student worksheet</p>
+        <h2>Print one copy per student. Cut here if printing separately.</h2>
+
+        <div class="cut-here no-print">— cut here for student copies —</div>
+
+        <div class="worksheet">
+          <div class="worksheet-header">
+            <div>
+              <h3>Frankston 2035 — Art That Lives</h3>
+              <p style="margin:.3rem 0 0;color:var(--muted);font-size:.9rem">Noticing Worksheet</p>
+            </div>
+            <div class="worksheet-meta">
+              <div class="worksheet-field"><strong>Name</strong><span></span></div>
+              <div class="worksheet-field"><strong>Year</strong><span></span></div>
+              <div class="worksheet-field"><strong>Date</strong><span></span></div>
+            </div>
+          </div>
+
+          <div class="ws-section">
+            <h4>Step 1 — Notice (10 minutes)</h4>
+            <div class="ws-prompt">Today's prompt: [Teacher writes the prompt here before printing]</div>
+            <p style="font-size:.9rem;color:var(--muted);margin:.5rem 0 .75rem">Look, listen, or remember for one minute before you write anything. Then answer:</p>
+            <p style="font-size:.9rem;font-weight:750;margin:.5rem 0 .3rem">What do you notice?</p>
+            <div class="ws-lines">
+              <div></div><div></div><div></div>
+            </div>
+            <p style="font-size:.9rem;font-weight:750;margin:1rem 0 .3rem">What feeling does this place or thing give you?</p>
+            <div class="ws-lines">
+              <div></div><div></div>
+            </div>
+          </div>
+
+          <div class="ws-section">
+            <h4>Step 2 — Make (15 minutes)</h4>
+            <p style="font-size:.9rem;color:var(--muted);margin:0 0 .75rem">Create something in response to the prompt. Choose your format: a sentence, a drawing, a map, a poem, a list. Use the space below.</p>
+            <div class="ws-box"></div>
+            <div class="ws-box" style="margin-top:.6rem"></div>
+          </div>
+
+          <div class="ws-section" style="margin-bottom:0">
+            <h4>Step 3 — Reflect</h4>
+            <p style="font-size:.9rem;font-weight:750;margin:.5rem 0 .3rem">What would you change about this place or artwork if you could?</p>
+            <div class="ws-lines">
+              <div></div><div></div>
+            </div>
+            <p style="font-size:.9rem;font-weight:750;margin:1rem 0 .3rem">What question would you put on a public wall in Frankston where strangers could read it?</p>
+            <div class="ws-lines">
+              <div></div><div></div>
+            </div>
+          </div>
+
+          <p style="margin:1.5rem 0 0;font-size:.78rem;color:var(--muted);border-top:1px solid var(--line);padding-top:.75rem">Frankston 2035 — Art That Lives. Independent civic proposal by Blue Snake Studio — not an official school or council publication. This worksheet does not leave the classroom without your teacher's permission and your family's consent.</p>
         </div>
       </div>
     </section>
@@ -124,24 +223,28 @@
           <h2>Check these before any student work leaves the classroom.</h2>
         </div>
         <ol class="rules-list">
-          <li>Confirm there is no personal data (full names, addresses, photos of students) in the work.</li>
+          <li>Confirm there is no personal data (full names, addresses, photos of students) in or on the work.</li>
           <li>Complete the school's standard permission process for displaying student work.</li>
-          <li>Gather family consent if work will appear on any public display or website.</li>
-          <li>Review the <a href="student-artwork-pathway.html">Student Artwork Pathway</a> and <a href="permission-checklist.html">Permission Checklist</a>.</li>
+          <li>Gather family consent before work appears on any public display or website.</li>
+          <li>Review the Student Artwork Pathway and Permission Checklist — in that order.</li>
           <li>Do not post student work online without explicit school and family approval.</li>
+          <li>Any QR code linking to student work must pass the Healthy Technology Charter review first.</li>
         </ol>
         <div class="hero-actions no-print" style="margin-top:1.5rem">
-          <a class="button primary" href="student-artwork-pathway.html">Student artwork pathway</a>
-          <a class="button secondary" href="permission-checklist.html">Permission checklist</a>
-          <a class="button secondary" href="../schools.html">Back to schools page</a>
+          <a class="button primary" href="/downloads/student-artwork-pathway">Student artwork pathway</a>
+          <a class="button secondary" href="/downloads/permission-checklist">Permission checklist</a>
+          <a class="button secondary" href="/schools">Back to schools page</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Frankston 2035 - Art That Lives. A seed kit by Blue Snake Studio.</p>
-    <p>This resource is a proposal tool, not a school endorsement or curriculum approval. Adapt for your class and context.</p>
+    <div>
+      <p>Frankston 2035 — Art That Lives.</p>
+      <p>The ecosystem is the artwork.</p>
+    </div>
+    <p class="footer-notice">Independent civic proposal by Blue Snake Studio — not an official Frankston City Council website. This resource is a proposal tool, not a school endorsement or curriculum approval.</p>
   </footer>
 </body>
 </html>
