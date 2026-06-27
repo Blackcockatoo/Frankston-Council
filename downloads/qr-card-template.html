@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QR Card Template — Frankston 2035</title>
+  <meta name="description" content="QR card template for Frankston 2035 pilots. Print-and-apply placeholder — QR codes must be generated once URLs are confirmed stable.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .qr-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .qr-card {
+      border: 2px solid var(--gold);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .qr-placeholder {
+      width: 100%;
+      aspect-ratio: 1;
+      max-width: 160px;
+      margin: 0 auto 1rem;
+      border: 2px dashed var(--muted);
+      display: grid;
+      place-items: center;
+      font-size: .85rem;
+      color: var(--muted);
+    }
+    .qr-card h3 {
+      font-size: 1rem;
+      margin: .5rem 0 .25rem;
+    }
+    .qr-card p {
+      font-size: .875rem;
+      margin: 0;
+    }
+    @media print {
+      .qr-card-grid { grid-template-columns: repeat(2, 1fr); }
+      .qr-placeholder { border: 2px dashed #999; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header no-print" aria-label="Primary">
+    <a class="brand-mark" href="../index.html" aria-label="Frankston 2035 home"><span class="brand-dot" aria-hidden="true"></span><span>Frankston 2035</span></a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="../index.html">Home</a>
+      <a href="../vision.html">Vision</a>
+      <a href="../pilots.html">Pilots</a>
+      <a href="../posters.html">Poster Seeds</a>
+      <a href="../print-pack.html">Print Pack</a>
+      <a href="../schools.html">Schools</a>
+      <a href="../healthy-technology.html">Healthy Tech</a>
+      <a href="../sister-city.html">Sister City</a>
+      <a href="../media-contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="section-inner two-column">
+        <div>
+          <p class="eyebrow">QR Card Template</p>
+          <h1>Placeholder cards — QR codes pending stable URLs.</h1>
+        </div>
+        <div class="prose">
+          <p>These are layout templates for print-and-apply QR trail cards. The QR code boxes are intentionally blank: actual QR codes must only be generated once the destination URLs are confirmed stable and reviewed for safety.</p>
+          <p class="maker-stamp dark-stamp">Do not generate or print live QR codes until: destination URLs are confirmed, the privacy layer is reviewed, and the pilot scope is approved. A QR code linking to a broken or unapproved destination creates public confusion and risks the pilot.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-band paper" id="what-blocked">
+      <div class="section-inner two-column">
+        <div>
+          <p class="eyebrow">What's needed before printing live cards</p>
+          <h2>Three gates before QR codes go on walls.</h2>
+        </div>
+        <div class="prose">
+          <ol>
+            <li><strong>Stable URL.</strong> The destination page must be on a confirmed, permanent URL — not a development or preview URL. Vercel preview URLs change on every deploy.</li>
+            <li><strong>Content review.</strong> The landing page the QR code points to must be reviewed for: no student personal data, clear ending, no login required, accessible on mobile without an app.</li>
+            <li><strong>Pilot scope confirmation.</strong> QR codes placed on physical public infrastructure (walls, trail signs, library displays) need council or venue permission for the location and duration.</li>
+          </ol>
+          <p>Until these three gates are cleared, use the placeholder layout below to plan card dimensions, text, and position — but do not print for public use.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-band white" id="card-layouts">
+      <div class="section-inner">
+        <p class="eyebrow">Card layout templates</p>
+        <h2>Layout guide — replace QR placeholder with real code when ready.</h2>
+        <div class="qr-card-grid">
+          <div class="qr-card">
+            <div class="qr-placeholder" aria-label="QR code placeholder — not yet generated">QR code<br>pending</div>
+            <h3>Pilot site name</h3>
+            <p>Frankston 2035 — notice, make, share.</p>
+            <p style="font-size:.75rem;margin-top:.5rem;color:var(--muted)">frankston-council.vercel.app</p>
+          </div>
+          <div class="qr-card">
+            <div class="qr-placeholder" aria-label="QR code placeholder — not yet generated">QR code<br>pending</div>
+            <h3>Schools trail</h3>
+            <p>For teachers and students: notice this place.</p>
+            <p style="font-size:.75rem;margin-top:.5rem;color:var(--muted)">frankston-council.vercel.app/schools</p>
+          </div>
+          <div class="qr-card">
+            <div class="qr-placeholder" aria-label="QR code placeholder — not yet generated">QR code<br>pending</div>
+            <h3>Poster seed</h3>
+            <p>Open, print, or display this poster.</p>
+            <p style="font-size:.75rem;margin-top:.5rem;color:var(--muted)">frankston-council.vercel.app/posters</p>
+          </div>
+          <div class="qr-card">
+            <div class="qr-placeholder" aria-label="QR code placeholder — not yet generated">QR code<br>pending</div>
+            <h3>Community prompt</h3>
+            <p>What does this place mean to you?</p>
+            <p style="font-size:.75rem;margin-top:.5rem;color:var(--muted)">URL to be confirmed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-band bay" id="safe-qr">
+      <div class="section-inner two-column">
+        <div>
+          <p class="eyebrow">Safe QR layer rules</p>
+          <h2>Every QR code must pass these checks.</h2>
+        </div>
+        <div class="prose">
+          <ul>
+            <li>The destination URL is permanent and will not change when code is republished.</li>
+            <li>The destination page loads on mobile without an app install.</li>
+            <li>The destination page requires no login by default.</li>
+            <li>The destination page collects no personal data from visitors.</li>
+            <li>The destination page has a clear ending — a task done, a thing made, a place noticed.</li>
+            <li>The destination page is accessible: readable text size, alt text on images, works without JavaScript for core content.</li>
+            <li>An adult (teacher, council officer, or studio) can remove or redirect the QR code quickly if needed.</li>
+          </ul>
+          <p>See the full rules at <a href="../healthy-technology.html">Healthy Technology Charter</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rules-block">
+      <div class="section-inner two-column">
+        <div>
+          <p class="eyebrow">Next step for QR cards</p>
+          <h2>Confirm pilot scope and URL before generating any real codes.</h2>
+        </div>
+        <div class="prose">
+          <p>When the pilot location and scope are confirmed:</p>
+          <ol>
+            <li>Lock the destination URL in Vercel (check cleanUrls config is stable).</li>
+            <li>Generate QR codes using a free tool (e.g., qr-code-generator.com) — do not use tools that embed tracking pixels or require an account for the free tier.</li>
+            <li>Test each code on at least two different phones before printing.</li>
+            <li>Print at minimum 3×3 cm for reliable scanning; larger if the card will be at arm's length or above.</li>
+            <li>Add a short plain-text URL under each code so it can be typed if the scan fails.</li>
+          </ol>
+          <div class="hero-actions no-print" style="margin-top:1.5rem">
+            <a class="button primary" href="../pilots.html">View pilot options</a>
+            <a class="button secondary" href="../healthy-technology.html">Healthy Tech Charter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Frankston 2035 - Art That Lives. A seed kit by Blue Snake Studio.</p>
+    <p>QR card template only. Do not print live cards until destination URLs are confirmed stable and reviewed.</p>
+  </footer>
+</body>
+</html>
