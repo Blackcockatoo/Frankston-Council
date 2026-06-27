@@ -1,7 +1,59 @@
 # Next Agent Handoff
 ## Frankston 2035 - Art That Lives
 
-## Current state
+---
+
+## Public-readiness audit — 2026-06-27 (Claude, branch `claude/frankston-public-ready-bpyq1k`)
+
+### Repo map
+
+Two deployable projects share this repo:
+
+| Location | Site | Deploy |
+|---|---|---|
+| Root (`/`) | Frankston 2035 — Art That Lives | Vercel (`vercel.json` + `npm run build`) |
+| `blkck2.0/blkck-main/` | Blue Snake Studio (blkck2.com) | Netlify (`blkck2.0/blkck-main/netlify.toml`) |
+| `blkck2.0/` | Frankston 2035 v2 (expanded, not yet deployed) | Not yet wired |
+
+### What was broken and is now fixed (root site)
+
+1. **Nav dead-ends** — `index.html`, `pilots.html`, `healthy-technology.html` were all missing "Print Pack" in the navigation. A visitor who landed on any of those pages had no path to the print materials. Fixed: Print Pack is now in all 5 page navs.
+2. **OG image wrong** — All pages pointed social sharing at the 2.5 MB hero PNG. The repo has a purpose-built 40 KB OG card (`frankston-2035-og-card-dark.png`). All pages now use it. `print-pack.html` had no OG image at all — added.
+3. **Language attribute wrong** — All 5 main pages had `lang="en"`. This is an Australian site. Updated to `lang="en-AU"` across all 6 deployed files (5 main + 404).
+4. **404 page was silent** — The 404 just did a `<meta http-equiv="refresh">` to `/` with no content. Replaced with a proper "page not found" layout using site styles, nav, and two CTAs.
+
+### What is confirmed working (root site)
+
+- Build: `npm run build` completes clean, outputs to `dist/`
+- All image paths resolve — 14 images, all present under `assets/images/`
+- All poster seed SVGs 01-06, 08-10 present under `assets/print-pack/poster-seeds/`
+- All inter-page nav links resolve
+- Print styles in `style.css` are correct — poster cards break to A4, header/footer hidden on print
+- `favicon.svg` present and correctly linked
+- `dist/` is in `.gitignore`
+- Accessibility basics: skip links on all pages, `aria-current` on active nav items, alt text on all images, table headers in healthy-technology.html
+
+### Documented blockers (root site — do not fake)
+
+| Blocker | Exactly what is needed |
+|---|---|
+| Poster seed 07 SVG missing | Generate `poster-seed-07-every-child-adds-a-mark.svg` at 2480×3508 px matching the style of seeds 01-06. Then update `print-pack.html` seed-07 card: remove the `<div class="poster-placeholder">` and the `pending` class, add `<img src="assets/print-pack/poster-seeds/poster-seed-07-every-child-adds-a-mark.svg" alt="...">` and a `<div class="pack-actions"><a href="...">Open SVG</a></div>`. |
+| Image performance | All hero/gallery PNGs are 2-3 MB each. Production deploy should compress to ≤300 KB WebP. No compression tooling is wired in. Add sharp/squoosh to build script, or replace files manually. Not fixable without tooling or replacement files. |
+| `frankston-hero.svg` unused | Exists at `assets/frankston-hero.svg` but never referenced in any HTML. README claims it's the "lightweight civic hero artwork." Either wire it into `index.html` as a hero replacement or delete it from the assets list. Currently deployed but unused. |
+| Social meta incomplete | No `<meta property="og:type">` or `<meta property="twitter:card">` on any page. Worth adding before any social campaign push. |
+
+### blkck2.0 site status
+
+No broken asset paths. All placeholder SVGs exist. All inter-page links resolve. `blkck2.0/TODO.md` correctly documents what's blocked (photography rights, QR codes, protocol gates). Not yet wired to a Vercel deploy.
+
+### Safe to delete
+
+- `styles.css` (root) — dark theme CSS for an earlier BSS iteration. No deployed Frankston 2035 page references it. Not in build script.
+- `Frankston 2035 - Art That Lives - Seed Kit/Static Website + Poster Seed Pack/` — original prototype superseded by root site.
+
+---
+
+## Current state (existing handoff below)
 
 This project is a civic creativity framework and seed kit. Frankston is the hero. Blue Snake Studio is the delivery engine, proof source, and maker stamp, not the headline.
 
