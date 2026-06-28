@@ -8,12 +8,13 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/style.css">
   <style>
+    /* ── Screen styles ─────────────────────────────────────────── */
     .brief-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
     .brief-meta-item { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: .75rem; padding: 1rem 1.2rem; }
     .brief-meta-item strong { display: block; color: var(--gold); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .3rem; }
     .brief-meta-item span { color: rgba(255,255,255,.84); font-size: .96rem; }
-    .ask-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: .85rem; counter-reset: ask-counter; }
-    .ask-list li { display: flex; align-items: flex-start; gap: 1rem; background: var(--white); border: 1px solid var(--line); border-radius: 1.2rem; padding: 1.2rem 1.4rem; counter-increment: ask-counter; }
+    .ask-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: .85rem; }
+    .ask-list li { display: flex; align-items: flex-start; gap: 1rem; background: var(--white); border: 1px solid var(--line); border-radius: 1.2rem; padding: 1.2rem 1.4rem; }
     .ask-num { display: inline-flex; align-items: center; justify-content: center; min-width: 2.4rem; height: 2.4rem; border-radius: 999px; background: var(--deep); color: var(--gold); font-weight: 950; font-size: .88rem; flex-shrink: 0; }
     .scope-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
     .scope-item { border: 1px solid var(--line); border-radius: 1rem; padding: 1.2rem; background: rgba(255,255,255,.72); }
@@ -21,11 +22,150 @@
     .not-list { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: .5rem; }
     .not-list li { padding: .65rem 1rem; background: rgba(233,130,107,.08); border: 1px solid rgba(233,130,107,.28); border-radius: .65rem; font-size: .95rem; }
     .not-list li::before { content: "✕ "; font-weight: 900; color: #a03000; }
-    @media print {
-      .brief-meta, .scope-grid { grid-template-columns: repeat(3, 1fr); }
-    }
+
     @media (max-width: 900px) {
       .brief-meta, .scope-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── A4 print styles ───────────────────────────────────────── */
+    @media print {
+      /* Page setup: A4 portrait, professional margins */
+      @page { size: A4 portrait; margin: 20mm 18mm 18mm 18mm; }
+
+      /* Base typography tightened for paper */
+      body { font-size: 11pt !important; line-height: 1.5 !important; background: white !important; color: #111 !important; }
+      h1 { font-size: 22pt !important; line-height: 1.1 !important; letter-spacing: -.03em !important; margin: 0 0 8pt !important; color: #111 !important; }
+      h2 { font-size: 13pt !important; line-height: 1.2 !important; letter-spacing: -.01em !important; margin: 0 0 6pt !important; color: #111 !important; break-after: avoid; page-break-after: avoid; }
+      h3 { font-size: 10.5pt !important; margin: 0 0 3pt !important; }
+      p, li { font-size: 10.5pt !important; line-height: 1.5 !important; orphans: 3; widows: 3; }
+
+      /* Hide screen-only chrome */
+      .skip-link, .site-header, .no-print, .hero-actions { display: none !important; }
+
+      /* Disclaimer bar: keep visible, calm bordered style */
+      .site-notice {
+        display: block !important;
+        background: #f5f5f5 !important;
+        border: 1pt solid #999 !important;
+        border-radius: 0 !important;
+        color: #333 !important;
+        font-size: 8pt !important;
+        font-weight: 700 !important;
+        padding: 5pt 8pt !important;
+        margin-bottom: 10pt;
+        text-align: left !important;
+      }
+
+      /* Hero: compact document-title block, not a full-bleed hero */
+      .page-hero {
+        background: none !important;
+        color: #111 !important;
+        padding: 0 0 12pt !important;
+        border-bottom: 2pt solid #111;
+        margin-bottom: 12pt;
+      }
+      .page-hero .section-inner { max-width: none !important; padding: 0 !important; }
+      .page-hero .two-column {
+        display: grid !important;
+        grid-template-columns: 1fr 2fr !important;
+        gap: 14pt !important;
+        align-items: start;
+      }
+      .page-hero .eyebrow { font-size: 7.5pt !important; color: #555 !important; letter-spacing: .12em; margin-bottom: 3pt !important; }
+      .page-hero .prose > p:first-of-type { margin: 0 0 8pt !important; color: #222 !important; }
+      .maker-stamp { font-size: 8pt !important; color: #555 !important; font-style: italic; border-left: 2pt solid #ccc; padding-left: 6pt; margin-top: 8pt !important; background: none !important; }
+
+      /* Brief-meta: bordered status cells */
+      .brief-meta { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 6pt !important; margin: 0 !important; }
+      .brief-meta-item { background: #f4f4f4 !important; border: 1pt solid #bbb !important; border-radius: 3pt !important; padding: 6pt 8pt !important; }
+      .brief-meta-item strong { color: #444 !important; font-size: 7pt !important; margin-bottom: 2pt; }
+      .brief-meta-item span { color: #111 !important; font-size: 9.5pt !important; }
+
+      /* Section layout */
+      .content-band, .rules-block {
+        background: none !important;
+        color: #111 !important;
+        padding: 10pt 0 0 !important;
+      }
+      .content-band + .content-band,
+      .content-band + .rules-block,
+      .rules-block { border-top: 1pt solid #ddd; margin-top: 0; }
+      .section-inner { max-width: none !important; padding: 0 !important; }
+      .two-column { display: grid !important; grid-template-columns: 1fr 2fr !important; gap: 14pt !important; }
+      .eyebrow { font-size: 7.5pt !important; color: #666 !important; letter-spacing: .12em; margin-bottom: 2pt !important; }
+      .prose p { margin-top: 0; margin-bottom: 6pt !important; }
+
+      /* Ask list: numbered cards, no break across page */
+      .ask-list { display: grid !important; gap: 5pt !important; margin-top: 8pt !important; }
+      .ask-list li {
+        background: #f8f8f8 !important;
+        border: 1pt solid #ddd !important;
+        border-radius: 3pt !important;
+        padding: 7pt 9pt !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .ask-num {
+        background: #111 !important;
+        color: #fff !important;
+        font-size: 8.5pt !important;
+        min-width: 1.6rem !important;
+        height: 1.6rem !important;
+        flex-shrink: 0;
+      }
+
+      /* Scope grid: bordered cells */
+      .scope-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 6pt !important; margin-top: 8pt !important; }
+      .scope-item {
+        background: #f4f4f4 !important;
+        border: 1pt solid #bbb !important;
+        border-radius: 3pt !important;
+        padding: 7pt 9pt !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .scope-item strong { color: #444 !important; font-size: 7pt !important; }
+      .scope-item span { color: #111 !important; }
+
+      /* Not-list: left-ruled items */
+      .not-list { display: block !important; margin: 6pt 0 0 !important; }
+      .not-list li {
+        background: none !important;
+        border: none !important;
+        border-left: 2.5pt solid #999 !important;
+        border-radius: 0 !important;
+        padding: 4pt 8pt !important;
+        margin-bottom: 3pt;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        color: #222 !important;
+      }
+      .not-list li::before { color: #666 !important; }
+
+      /* Rules block (next steps + contact) */
+      .rules-block {
+        background: none !important;
+        color: #111 !important;
+        padding: 10pt 0 0 !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
+      .rules-block ol { padding-left: 16pt; margin: 6pt 0 8pt; }
+      .rules-block li { margin-bottom: 3pt; }
+      .rules-block p { color: #111 !important; margin: 4pt 0; }
+      .rules-block a { color: #111 !important; text-decoration: none; }
+
+      /* Expose mailto address in print (link text IS the address — ensure colour is visible) */
+      a[href^="mailto:"] { color: #111 !important; font-weight: 700; }
+
+      /* Page-break rules */
+      h2 { break-after: avoid; page-break-after: avoid; }
+      .ask-list { break-inside: avoid; page-break-inside: avoid; }
+      #stage-one { break-before: auto; }
+      #what-it-is-not { break-before: avoid; page-break-before: avoid; }
+
+      /* Footer: hide screen footer (disclaimer is in .site-notice at top) */
+      .site-footer { display: none !important; }
     }
   </style>
 </head>
